@@ -1280,3 +1280,190 @@ int main() {
 ✅ Total Time: `O(n + w)`  
 ✅ Total Space: `O(w + k + m)`
 
+## ER Diagram and SQL Queries: Author-Book-Edition
+
+### ✅ ER Diagram
+
+#### 🔶 Entities:
+- **Author**
+    - `author_id` (Primary Key)
+    - `name`
+        
+- **Book**
+    - `book_id` (Primary Key)
+    - `title`
+        
+- **Edition**
+    - `edition_id` (Primary Key)
+    - `book_id` (Foreign Key to Book)
+    - `year`
+    - `isbn`
+        
+- **Author_Book** (Join Table for Many-to-Many)
+    - `author_id` (Foreign Key to Author)    
+    - `book_id` (Foreign Key to Book)
+        
+
+#### 🧩 Relationships:
+
+- A **many-to-many** relationship between Author and Book is resolved using `Author_Book`.
+- A **one-to-many** relationship exists between Book and Edition.
+
+#### 🖼️ ERD Structure (Simplified):
+
+```
+Author           Book             Edition
+--------         --------         -------------
+author_id <--> book_id <--> edition_id
+     |               |                 |
+     |               |                 |
+     --------------- Author_Book       |
+                                    [book_id FK]
+```
+### ✅ SQL Queries
+
+#### 1️⃣ Total Number of Books
+
+```sql
+SELECT COUNT(*) AS total_books
+FROM Book;
+```
+
+#### 2️⃣ Books Having More Than One Author
+
+```sql
+SELECT B.book_id, B.title
+FROM Book B
+JOIN (
+    SELECT book_id
+    FROM Author_Book
+    GROUP BY book_id
+    HAVING COUNT(DISTINCT author_id) > 1
+) A ON B.book_id = A.book_id;
+```
+
+#### 3️⃣ Books Having Only One Author
+
+```sql
+SELECT B.book_id, B.title
+FROM Book B
+JOIN (
+    SELECT book_id
+    FROM Author_Book
+    GROUP BY book_id
+    HAVING COUNT(DISTINCT author_id) = 1
+) A ON B.book_id = A.book_id;
+```
+### 🔍 Sample Data Flow (Illustrative):
+
+#### Author Table
+
+```
+(1, 'Alice')
+(2, 'Bob')
+```
+
+#### Book Table
+
+```
+(101, 'ML Book')
+(102, 'AI Book')
+```
+
+#### Author_Book Table
+
+```
+(1, 101)
+(2, 101)
+(1, 102)
+```
+
+➡️ So:
+
+- Book `101` ("ML Book") has 2 authors → appears in **Query #2**
+- Book `102` ("AI Book") has 1 author → appears in **Query #3**
+
+## ✅ Round 2: Interview Optimization + SQL Query
+
+### 📌 Question 1: Interview Slot Optimization (Maximize Utilization ≤ 60 mins)
+
+**Problem:**  
+You're given a list of `[student_id, time_taken]` pairs. You can only choose **2 students**. The interview can go up to **60 minutes only**. Find the pair of students whose **total time is closest to 60** without exceeding it.
+### 🔶 Approach 1: Brute Force — O(n²)
+
+```python
+def max_util_pair_brute(arr):
+    max_sum = 0
+    result = ()
+    n = len(arr)
+
+    for i in range(n):
+        for j in range(i+1, n):
+            t1 = arr[i][1]
+            t2 = arr[j][1]
+            total = t1 + t2
+            if total <= 60 and total > max_sum:
+                max_sum = total
+                result = (arr[i][0], arr[j][0])
+    return result
+```
+### 🔶 Approach 2: Optimized Two-Pointer — O(n log n)
+
+Sort the list by `time_taken` and use two pointers:
+
+```python
+def max_util_pair_optimized(arr):
+    # Sort by time taken
+    arr.sort(key=lambda x: x[1])
+
+    left = 0
+    right = len(arr) - 1
+    max_sum = 0
+    result = ()
+
+    while left < right:
+        total = arr[left][1] + arr[right][1]
+        if total > 60:
+            right -= 1
+        else:
+            if total > max_sum:
+                max_sum = total
+                result = (arr[left][0], arr[right][0])
+            left += 1
+    return result
+```
+### 🧪 Example Test Case:
+
+```python
+arr = [
+    [1, 20],
+    [2, 40],
+    [3, 25],
+    [4, 35],
+    [5, 50]
+]
+
+# Output: (2, 3) or (1, 5) — both sum up to 60
+print(max_util_pair_optimized(arr))
+```
+
+### 📌 Question 2: SQL — Max Salary per Department
+
+#### 🗄️ Schema:
+- `Employee(emp_id, name, salary, dept_id)`
+- `Department(dept_id, dept_name)`
+### 🔧 Query with JOIN:
+
+```sql
+SELECT D.dept_name, MAX(E.salary) AS max_salary
+FROM Employee E
+JOIN Department D ON E.dept_id = D.dept_id
+GROUP BY D.dept_name;
+```
+### 🔧 Alternate if only Employee Table:
+
+```sql
+SELECT dept_id, MAX(salary) AS max_salary
+FROM Employee
+GROUP BY dept_id;
+```
