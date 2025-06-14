@@ -609,7 +609,6 @@ Return the **minimum possible points** you can score after slicing the string `S
 ### 🧪 Sample Input
 
 `abac`
-
 ### ✅ Sample Output
 
 ### 🔍 Explanation
@@ -628,6 +627,7 @@ But `"aba"`, `"c"` is better than `"ab"`, `"ac"` in this case? No. Wait—We mus
 
 Best is: `"ab"`, `"a"`, `"c"`
 - lengths: 2 + 1 + 1 → score = 4 + 1 + 1 = **6**
+
 
 
 
@@ -827,3 +827,38 @@ ORDER BY
 4. **Join with `department_revenue`**: To get the actual department name.
 5. **Group by `department_name`**: Count distinct procedures satisfying the condition.
 6. **Order results**: As per the requirement — by `procedure_count DESC`, then `department_name ASC`.
+
+Interview Question
+### 🧠 **Problem: Century Intervals**
+#### **Description**:
+
+You are given an array `runs` of integers representing the scores of a batsman in consecutive cricket matches. Some elements in the array may be equal to a special value `x`, which represents that the batsman did **not play** that match.
+
+Your task is to find the **number of matches played** between **two consecutive centuries**. A century is defined as a score of **100 or more runs** in a single match. You must only count matches where the batsman **played** (i.e., scores that are **not equal to `x`**) and **did not score a century**.
+
+Do not modify the original `runs` array.
+#### **Input**:
+
+- An integer array `runs` of length `n` (`1 ≤ n ≤ 10^5`), where each element is an integer (`0 ≤ runs[i] ≤ 1000`).
+- An integer `x` representing a value in `runs` that indicates a **match not played**.
+#### **Output**:
+
+- Return a list of integers, where each element represents the number of **played, non-century** matches between two consecutive centuries.
+#### **Example 1**:
+
+Input: runs = [120, 0, 80, 0, 150, 20, 0, 130] 
+x = 0  
+Output: [1, 1]  
+Explanation: - 
+Century 1 at index 0 → 120 
+Century 2 at index 4 → 150 → one match played between (80) 
+Century 3 at index 7 → 130 → one match played between (20)``
+#### **Example 2**:
+Input: runs = [0, 0, 100, 0, 0, 100, 0] x = 0  
+Output: [0]  
+Explanation: - Two centuries at index 2 and 5 - No matches played between them`
+#### **Constraints**:
+
+- Do not modify the input array.
+- You must only count matches where the batsman played (i.e., `runs[i] != x`) and **did not** score a century.
+- If there are less than two centuries, return an empty list.
