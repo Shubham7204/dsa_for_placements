@@ -604,7 +604,6 @@ Return the **minimum possible points** you can score after slicing the string `S
 - An integer representing the **minimum total score** achievable by slicing string `S` such that:
     - Each character appears in **only one part**, and
     - The sum of **(length of part)²** is **minimized**.
-    - 
 ### 🧪 Sample Input
 
 `abac`
@@ -628,7 +627,9 @@ But `"aba"`, `"c"` is better than `"ab"`, `"ac"` in this case? No. Wait—We mus
 Best is: `"ab"`, `"a"`, `"c"`
 - lengths: 2 + 1 + 1 → score = 4 + 1 + 1 = **6**
 
+
 # SQL
+
 ![[WhatsApp Image 2025-06-13 at 20.37.40_cbb900fe.jpg]]
 
 ![[WhatsApp Image 2025-06-13 at 20.37.40_31340394.jpg]]
