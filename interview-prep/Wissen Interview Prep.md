@@ -473,11 +473,11 @@ Find the **minimum value of `X`** such that the server is able to serve all requ
 
 - At **time = 4**, the server receives max load: 4 (client 0) + 3 (client 1) + 2 (client 3) + 2 (client 2) = **11**
 
-![[WhatsApp Image 2025-06-13 at 20.34.52_64bfc4e7.jpg]]
+![[serverdsa.jpg]]
 
-![[WhatsApp Image 2025-06-13 at 20.34.53_c60ae8e7.jpg]]
+![[server3dsa.jpg]]
 
-![[WhatsApp Image 2025-06-13 at 20.34.53_6227e39c.jpg]]
+![[server2dsa.jpg]]
 ### 🧪 Input:
 N = 4 
 A = [4, 3, 2, 2] 
@@ -589,7 +589,7 @@ int findMaxRequestsBrute(int n, vector<int>& a, vector<int>& l, vector<int>& r) 
 
 ## ✅ Problem Statement: Slice Master
 
-![[WhatsApp Image 2025-06-13 at 20.39.12_f4090232.jpg|338]]
+![[slicemasterdsa.jpg|338]]
 
 You are given a string `S`. You must divide this string into one or more **non-empty substrings**, such that:
 
@@ -632,13 +632,13 @@ Best is: `"ab"`, `"a"`, `"c"`
 
 # SQL
 
-![[WhatsApp Image 2025-06-13 at 20.37.40_cbb900fe.jpg]]
+![[sql4.jpg]]
 
-![[WhatsApp Image 2025-06-13 at 20.37.40_31340394.jpg]]
+![[sql2.jpg]]
 
-![[WhatsApp Image 2025-06-13 at 20.37.40_95176c23.jpg]]
+![[sql1.jpg]]
 
-![[WhatsApp Image 2025-06-13 at 20.37.40_ac719b8f.jpg]]
+![[sql3.jpg]]
 ### Full Problem Statement (Rewritten Clearly)
 
 **Title:** Procedures with High Revenue Generation
