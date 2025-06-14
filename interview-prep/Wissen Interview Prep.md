@@ -629,6 +629,8 @@ But `"aba"`, `"c"` is better than `"ab"`, `"ac"` in this case? No. Wait—We mus
 Best is: `"ab"`, `"a"`, `"c"`
 - lengths: 2 + 1 + 1 → score = 4 + 1 + 1 = **6**
 
+
+
 ## ✅ Problem Statement: Good Citizen
 
 ![[good citizen.jpg|300]]
@@ -667,6 +669,41 @@ We check each citizen:
 
 Good citizens = 2
 
+```
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int countGoodCitizens(int n, vector<int>& behaviour) {
+    int count = 0;
+
+    for (int i = 0; i < n; i++) {
+        int left = (i - 1 >= 0) ? behaviour[i - 1] : 0;
+        int right = (i + 1 < n) ? behaviour[i + 1] : 0; 
+        int avg = (left + right) / 2;
+
+        if (behaviour[i] > avg) {
+            count++;
+        }
+    }
+    return count;
+}
+
+int main() {
+    int n;
+    cin >> n;
+
+    vector<int> behaviour(n);
+    for (int i = 0; i < n; ++i) {
+        cin >> behaviour[i];
+    }
+
+    int result = countGoodCitizens(n, behaviour);
+    cout << result << endl;
+
+    return 0;
+}
+```
 
 # SQL
 
