@@ -883,3 +883,47 @@ Explanation: - Two centuries at index 2 and 5 - No matches played between them`
 - You must only count matches where the batsman played (i.e., `runs[i] != x`) and **did not** score a century.
 - If there are less than two centuries, return an empty list.
 
+```
+#include <iostream>
+#include <vector>
+using namespace std;
+
+void centuryIntervals(const vector<int>& runs, int x) {
+    vector<int> ans;
+    bool found = false;
+    int count = 0;
+
+    for (int i = 0; i < runs.size(); i++) {
+        if (runs[i] == x) {
+            continue;
+        }
+
+        if (runs[i] >= 100) {
+            if (found) {
+                ans.push_back(count);
+            }
+            found = true;
+            count = 0;
+        } else {
+            if (found) {
+                count++;
+            }
+        }
+    }
+
+    for (int i = 0; i < ans.size(); i++) {
+        cout << ans[i] << " ";
+    }
+    cout << endl;
+}
+
+int main() {
+    vector<int> runs = {120, 0, 80, 0, 150, 20, 0, 130};
+    int x = 0;
+
+    centuryIntervals(runs, x);
+
+    return 0;
+}
+```
+
