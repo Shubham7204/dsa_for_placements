@@ -730,13 +730,10 @@ int main() {
 
 # SQL
 
-![[sql4.jpg]]
-
-![[sql2.jpg]]
-
-![[sql1.jpg]]
-
-![[sql3.jpg]]
+![](../pics/sql1.jpg)
+![](../pics/sql2.jpg)
+![](../pics/sql3.jpg)
+![](../pics/sql4.jpg)
 ### Full Problem Statement (Rewritten Clearly)
 
 **Title:** Procedures with High Revenue Generation
