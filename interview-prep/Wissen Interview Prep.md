@@ -184,10 +184,35 @@ Given a sentence, count how many times each letter appears. Optimize your approa
 
 - Iterate through the string. 
 - For each **alphabet character**, update the frequency in a hashmap.
-    
 #### ✅ **Code :**
 
+```
+#include <iostream>
+#include <map>
+#include <cctype>
+using namespace std;
 
+int main() {
+    string sentence = "The Quick Brown Fox Jumps Over The Lazy Dog!";
+    map<char, int> freq;
+
+    for (int i = 0; i < sentence.length(); i++) {
+        char ch = sentence[i];
+        if (isalpha(ch)) {
+            ch = tolower(ch); // Convert to lowercase
+            freq[ch]++;
+        }
+    }
+
+    for (char ch = 'a'; ch <= 'z'; ch++) {
+        if (freq[ch] > 0) {
+            cout << ch << " → " << freq[ch] << endl;
+        }
+    }
+
+    return 0;
+}
+```
 
 #### ✅ **HashMap Explanation:**
 
@@ -195,7 +220,6 @@ Given a sentence, count how many times each letter appears. Optimize your approa
     
     - Average-case: **O(1)** time for insertion & lookup
     - Worst-case: **O(n)** if collisions occur (rare)
-        
 
 #### ✅ **Why HashMap > Array here?**
 
@@ -589,14 +613,14 @@ int findMaxRequestsBrute(int n, vector<int>& a, vector<int>& l, vector<int>& r) 
 
 ## ✅ Problem Statement: Slice Master
 
-![[slicemasterdsa.jpg|299]]
+![[slicemasterdsa.jpg|300]]
 
 You are given a string `S`. You must divide this string into one or more **non-empty substrings**, such that:
 
 1. **Each character appears in at most one substring.**
 2. For each substring of length `X`, you gain **X² points**.
 3. Your goal is to **minimize the total points**.
-    
+
 Return the **minimum possible points** you can score after slicing the string `S`.
 
 ### 🧾 Input
@@ -630,7 +654,6 @@ Best is: `"ab"`, `"a"`, `"c"`
 
 
 
-
 ## ✅ Problem Statement: Good Citizen
 
 ![[good citizen.jpg|300]]
@@ -654,7 +677,7 @@ Count how many good citizens are present in the locality.
 ### 📤 Output Format
 - A single integer: number of good citizens.
 ### 🧪 Sample Input
-`5 
+5 
 4 8 2 6 1`
 ### ✅ Sample Output
 `2`
@@ -828,7 +851,7 @@ ORDER BY
 5. **Group by `department_name`**: Count distinct procedures satisfying the condition.
 6. **Order results**: As per the requirement — by `procedure_count DESC`, then `department_name ASC`.
 
-Interview Question
+# Interview Question
 ### 🧠 **Problem: Century Intervals**
 #### **Description**:
 
@@ -862,3 +885,4 @@ Explanation: - Two centuries at index 2 and 5 - No matches played between them`
 - Do not modify the input array.
 - You must only count matches where the batsman played (i.e., `runs[i] != x`) and **did not** score a century.
 - If there are less than two centuries, return an empty list.
+
