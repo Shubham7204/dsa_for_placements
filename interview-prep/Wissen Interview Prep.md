@@ -927,3 +927,406 @@ int main() {
 }
 ```
 
+# Technical Round 1 
+## Question 1:
+Given a list of words, perform the following steps:
+
+1. Store **even-length** words in a list `even_words`.
+2. Store **odd-length** words in a list `odd_words`.
+3. If a word has even length **and** is longer than 5, store it in another list `even_longer_words`.
+4. If a word has odd length **and** is longer than 5, store it in another list `odd_longer_words`.
+5. If `even_longer_words` or `odd_longer_words` will be empty, **do not create** these lists at all (conditional list creation).
+
+C++
+```
+#include <iostream>
+#include <vector>
+using namespace std;
+
+void printVec(const string &label, const vector<string> &v) {
+    cout << label << ": ";
+    for (int i = 0; i < v.size(); ++i)
+        cout << v[i] << " ";
+    cout << endl;
+}
+
+int main() {
+    vector<string> words = {"hello", "world", "chatgpt", "code", "AI", "interview", "logics"};
+    vector<string> even_words, odd_words, even_longer_words, odd_longer_words;
+
+    for (int i = 0; i < words.size(); ++i) {
+        string w = words[i];
+        int len = w.length();
+        if (len % 2 == 0)
+            (len > 5 ? even_longer_words : even_words).push_back(w);
+        else
+            (len > 5 ? odd_longer_words : odd_words).push_back(w);
+    }
+
+    printVec("Even short words", even_words);
+    printVec("Odd short words", odd_words);
+    printVec("Even longer words", even_longer_words);
+    printVec("Odd longer words", odd_longer_words);
+
+    return 0;
+}
+```
+
+Python
+```
+words = ["hello", "world", "chatgpt", "code", "AI", "interview", "logics"]
+
+even_words = []
+odd_words = []
+
+even_longer_words = None
+odd_longer_words = None
+
+for word in words:
+    if len(word) % 2 == 0:
+        if len(word) > 5:
+            if even_longer_words is None:
+                even_longer_words = []
+            even_longer_words.append(word)
+        else:
+            even_words.append(word)
+    else:
+        if len(word) > 5:
+            if odd_longer_words is None:
+                odd_longer_words = []
+            odd_longer_words.append(word)
+        else:
+            odd_words.append(word)
+```
+
+## 🧠 Problem: Text Paragraph Analysis
+
+You are given a **multi-paragraph** text. Perform the following tasks:
+
+---
+
+### ✅ 1. How to detect the 2nd paragraph?
+
+- Paragraphs are separated by **two newlines (****`\n\n`****)**.
+- So split the entire text using `text.split('\n\n')`.    
+- This will give you a list of paragraphs in the order they appear.
+    
+```python
+paragraphs = text.strip().split('\n\n')
+```
+
+### ✅ 2. Find the paragraph with the **maximum number of words**
+
+1. Loop through the paragraphs.
+2. Use regex to extract words.
+3. Count the words in each.
+    
+4. Track the paragraph with the highest word count.
+    
+
+```python
+import re
+max_para = ""
+max_word_count = 0
+
+for para in paragraphs:
+    words = re.findall(r'\b\w+\b', para)
+    if len(words) > max_word_count:
+        max_word_count = len(words)
+        max_para = para
+```
+
+---
+
+### ✅ 3. Find the **most frequent words** in the entire text
+
+- Extract all words from the full text using regex.
+    
+- Convert to lowercase.
+    
+- Use a hashmap or `collections.Counter`.
+    
+
+```python
+from collections import Counter
+
+words = re.findall(r'\b\w+\b', text.lower())
+word_freq = Counter(words)
+
+max_freq = max(word_freq.values())
+most_common_words = [w for w, f in word_freq.items() if f == max_freq]
+```
+
+---
+
+### ✅ 4. Find the **most frequent 4-letter palindrome**
+
+- Filter the `words` list:
+    
+    - Length = 4
+        
+    - Palindrome = `word == word[::-1]`
+        
+
+```python
+palindromes = [w for w in words if len(w) == 4 and w == w[::-1]]
+pal_freq = Counter(palindromes)
+
+most_common_4_letter_palindrome = pal_freq.most_common(1)[0][0] if pal_freq else None
+```
+
+---
+
+## 🔁 Pseudocode
+
+```
+function process_text(text):
+    split text into paragraphs using '\n\n'
+    for each paragraph:
+        extract words using regex
+        count words and track max paragraph
+
+    extract all words from full text (lowercase)
+    count frequencies of each word
+    find max frequency and corresponding word(s)
+
+    for each word:
+        if length == 4 and word == reverse(word):
+            count frequency of such words
+    return paragraph with most words, most frequent word(s), most frequent 4-letter palindrome
+```
+
+---
+
+## 🧪 Test Case
+
+```python
+text = """
+Radar sees wow deed.
+
+This is another paragraph. It has more words and repeated repeated words.
+
+Tiny one.
+"""
+
+Expected:
+- Paragraph with max words: 2nd
+- Most frequent word: "repeated"
+- Most frequent 4-letter palindrome: "deed"
+```
+
+---
+
+## ⏱ Time & Space Complexity
+
+|Task|Time|Space|
+|---|---|---|
+|Split paragraphs|O(n)|O(p)|
+|Word extraction|O(n)|O(w)|
+|Frequency counting|O(w)|O(k)|
+|Palindrome filtering|O(w)|O(m)|
+
+- **n** = length of text
+- **p** = number of paragraphs
+- **w** = number of words
+- **k** = unique words    
+- **m** = 4-letter palindromes
+    
+
+✅ Total Time: `O(n + w)`  
+✅ Total Space: `O(w + k + m)`
+
+## 🧠 Problem: Text Paragraph Analysis in C++
+
+You are given a **multi-paragraph** text. Perform the following tasks:
+
+---
+
+### ✅ 1. How to detect the 2nd paragraph?
+
+- Paragraphs are separated by **two newlines ("\n\n")**.
+    
+- In C++, use `getline()` or string splitting to identify paragraph boundaries.
+    
+- A simple way is to split the string based on "\n\n" using a helper function.
+    
+
+```cpp
+#include <vector>
+#include <string>
+
+using namespace std;
+
+vector<string> splitParagraphs(const string& text) {
+    vector<string> paragraphs;
+    size_t start = 0, end;
+    string delimiter = "\n\n";
+    while ((end = text.find(delimiter, start)) != string::npos) {
+        paragraphs.push_back(text.substr(start, end - start));
+        start = end + delimiter.length();
+    }
+    paragraphs.push_back(text.substr(start));
+    return paragraphs;
+}
+```
+
+---
+
+### ✅ 2. Find the paragraph with the **maximum number of words**
+
+```cpp
+#include <regex>
+#include <string>
+#include <vector>
+#include <iostream>
+
+using namespace std;
+
+string getMaxWordParagraph(const vector<string>& paragraphs) {
+    regex wordRegex("\\b\\w+\\b");
+    int maxCount = 0;
+    string maxPara = "";
+
+    for (const auto& para : paragraphs) {
+        int count = distance(
+            sregex_iterator(para.begin(), para.end(), wordRegex),
+            sregex_iterator());
+        if (count > maxCount) {
+            maxCount = count;
+            maxPara = para;
+        }
+    }
+    return maxPara;
+}
+```
+
+---
+
+### ✅ 3. Find the **most frequent words** in the entire text
+
+```cpp
+#include <unordered_map>
+#include <sstream>
+#include <algorithm>
+#include <regex>
+
+using namespace std;
+
+vector<string> getMostFrequentWords(const string& text) {
+    unordered_map<string, int> freq;
+    regex wordRegex("\\b\\w+\\b");
+    for (auto it = sregex_iterator(text.begin(), text.end(), wordRegex);
+         it != sregex_iterator(); ++it) {
+        string word = it->str();
+        transform(word.begin(), word.end(), word.begin(), ::tolower);
+        freq[word]++;
+    }
+    int maxFreq = 0;
+    for (const auto& [word, count] : freq) {
+        maxFreq = max(maxFreq, count);
+    }
+    vector<string> result;
+    for (const auto& [word, count] : freq) {
+        if (count == maxFreq) {
+            result.push_back(word);
+        }
+    }
+    return result;
+}
+```
+
+---
+
+### ✅ 4. Find the **most frequent 4-letter palindrome**
+
+```cpp
+#include <unordered_map>
+#include <regex>
+#include <algorithm>
+
+using namespace std;
+
+string getMostFrequent4LetterPalindrome(const string& text) {
+    unordered_map<string, int> palFreq;
+    regex wordRegex("\\b\\w{4}\\b");
+    for (auto it = sregex_iterator(text.begin(), text.end(), wordRegex);
+         it != sregex_iterator(); ++it) {
+        string word = it->str();
+        transform(word.begin(), word.end(), word.begin(), ::tolower);
+        if (word == string(word.rbegin(), word.rend())) {
+            palFreq[word]++;
+        }
+    }
+    int maxFreq = 0;
+    string mostCommon = "";
+    for (const auto& [word, count] : palFreq) {
+        if (count > maxFreq) {
+            maxFreq = count;
+            mostCommon = word;
+        }
+    }
+    return mostCommon;
+}
+```
+
+---
+
+## 🔁 Pseudocode Summary
+
+```
+function splitParagraphs(text): split by "\n\n"
+function getMaxWordParagraph(paragraphs): find para with max word count
+function getMostFrequentWords(text): build hashmap of frequency
+function getMostFrequent4LetterPalindrome(text): count 4-letter palindromes
+```
+
+---
+
+## 🧪 Sample Test
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    string text = "Radar sees wow deed.\n\nThis is another paragraph. It has more words and repeated repeated words.\n\nTiny one.";
+
+    vector<string> paras = splitParagraphs(text);
+    string maxPara = getMaxWordParagraph(paras);
+    vector<string> freqWords = getMostFrequentWords(text);
+    string pal4 = getMostFrequent4LetterPalindrome(text);
+
+    cout << "Max Word Paragraph: " << maxPara << "\n";
+    cout << "Most Frequent Words: ";
+    for (const auto& word : freqWords) cout << word << " ";
+    cout << "\nMost Frequent 4-letter Palindrome: " << pal4 << "\n";
+
+    return 0;
+}
+```
+
+---
+
+## ⏱ Time & Space Complexity
+
+|Task|Time|Space|
+|---|---|---|
+|Split paragraphs|O(n)|O(p)|
+|Word extraction|O(n)|O(w)|
+|Frequency counting|O(w)|O(k)|
+|Palindrome filtering|O(w)|O(m)|
+
+- **n** = total characters in text
+    
+- **p** = number of paragraphs
+    
+- **w** = number of words
+    
+- **k** = unique words
+    
+- **m** = palindromes of length 4
+    
+
+✅ Total Time: `O(n + w)`  
+✅ Total Space: `O(w + k + m)`
