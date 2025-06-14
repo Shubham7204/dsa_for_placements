@@ -1020,10 +1020,8 @@ paragraphs = text.strip().split('\n\n')
 1. Loop through the paragraphs.
 2. Use regex to extract words.
 3. Count the words in each.
-    
 4. Track the paragraph with the highest word count.
     
-
 ```python
 import re
 max_para = ""
@@ -1036,16 +1034,11 @@ for para in paragraphs:
         max_para = para
 ```
 
----
-
 ### ✅ 3. Find the **most frequent words** in the entire text
 
-- Extract all words from the full text using regex.
-    
+- Extract all words from the full text using regex.    
 - Convert to lowercase.
-    
 - Use a hashmap or `collections.Counter`.
-    
 
 ```python
 from collections import Counter
@@ -1057,26 +1050,17 @@ max_freq = max(word_freq.values())
 most_common_words = [w for w, f in word_freq.items() if f == max_freq]
 ```
 
----
-
 ### ✅ 4. Find the **most frequent 4-letter palindrome**
 
 - Filter the `words` list:
-    
     - Length = 4
-        
     - Palindrome = `word == word[::-1]`
-        
-
 ```python
 palindromes = [w for w in words if len(w) == 4 and w == w[::-1]]
 pal_freq = Counter(palindromes)
 
 most_common_4_letter_palindrome = pal_freq.most_common(1)[0][0] if pal_freq else None
 ```
-
----
-
 ## 🔁 Pseudocode
 
 ```
@@ -1095,9 +1079,6 @@ function process_text(text):
             count frequency of such words
     return paragraph with most words, most frequent word(s), most frequent 4-letter palindrome
 ```
-
----
-
 ## 🧪 Test Case
 
 ```python
@@ -1114,9 +1095,6 @@ Expected:
 - Most frequent word: "repeated"
 - Most frequent 4-letter palindrome: "deed"
 ```
-
----
-
 ## ⏱ Time & Space Complexity
 
 |Task|Time|Space|
@@ -1132,24 +1110,17 @@ Expected:
 - **k** = unique words    
 - **m** = 4-letter palindromes
     
-
 ✅ Total Time: `O(n + w)`  
 ✅ Total Space: `O(w + k + m)`
 
 ## 🧠 Problem: Text Paragraph Analysis in C++
 
 You are given a **multi-paragraph** text. Perform the following tasks:
-
----
-
 ### ✅ 1. How to detect the 2nd paragraph?
 
 - Paragraphs are separated by **two newlines ("\n\n")**.
-    
 - In C++, use `getline()` or string splitting to identify paragraph boundaries.
-    
 - A simple way is to split the string based on "\n\n" using a helper function.
-    
 
 ```cpp
 #include <vector>
@@ -1169,9 +1140,6 @@ vector<string> splitParagraphs(const string& text) {
     return paragraphs;
 }
 ```
-
----
-
 ### ✅ 2. Find the paragraph with the **maximum number of words**
 
 ```cpp
@@ -1199,9 +1167,6 @@ string getMaxWordParagraph(const vector<string>& paragraphs) {
     return maxPara;
 }
 ```
-
----
-
 ### ✅ 3. Find the **most frequent words** in the entire text
 
 ```cpp
@@ -1234,9 +1199,6 @@ vector<string> getMostFrequentWords(const string& text) {
     return result;
 }
 ```
-
----
-
 ### ✅ 4. Find the **most frequent 4-letter palindrome**
 
 ```cpp
@@ -1268,9 +1230,6 @@ string getMostFrequent4LetterPalindrome(const string& text) {
     return mostCommon;
 }
 ```
-
----
-
 ## 🔁 Pseudocode Summary
 
 ```
@@ -1279,9 +1238,6 @@ function getMaxWordParagraph(paragraphs): find para with max word count
 function getMostFrequentWords(text): build hashmap of frequency
 function getMostFrequent4LetterPalindrome(text): count 4-letter palindromes
 ```
-
----
-
 ## 🧪 Sample Test
 
 ```cpp
@@ -1305,9 +1261,6 @@ int main() {
     return 0;
 }
 ```
-
----
-
 ## ⏱ Time & Space Complexity
 
 |Task|Time|Space|
@@ -1318,15 +1271,12 @@ int main() {
 |Palindrome filtering|O(w)|O(m)|
 
 - **n** = total characters in text
-    
 - **p** = number of paragraphs
-    
 - **w** = number of words
-    
 - **k** = unique words
-    
 - **m** = palindromes of length 4
     
 
 ✅ Total Time: `O(n + w)`  
 ✅ Total Space: `O(w + k + m)`
+
