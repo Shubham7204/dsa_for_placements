@@ -1467,3 +1467,129 @@ SELECT dept_id, MAX(salary) AS max_salary
 FROM Employee
 GROUP BY dept_id;
 ```
+## 🧠 Problem: Text Paragraph Analysis in C++ (Inspired by Sahil's Approach)
+
+You are given a **multi-paragraph** string. Perform the following tasks:
+
+---
+
+### ✅ Question 1: Identify Paragraph Boundaries
+
+**Goal:** Detect paragraph breaks and split using double newline (`\n\n`).
+
+```cpp
+vector<tuple<int, int, string>> getParagraphs(const string& text) {
+    vector<tuple<int, int, string>> paras;
+    int start = 0;
+    while (start < text.size()) {
+        int end = text.find("\n\n", start);
+        if (end == string::npos) end = text.size();
+        string para = text.substr(start, end - start);
+        paras.emplace_back(start, end, para);
+        start = end + 2; // Skip the "\n\n"
+    }
+    return paras;
+}
+```
+
+---
+
+### ✅ Question 2: Paragraph with Maximum Number of Words
+
+```cpp
+int countWords(const string& s) {
+    istringstream iss(s);
+    string word;
+    int count = 0;
+    while (iss >> word) count++;
+    return count;
+}
+
+string getMaxWordParagraph(const vector<tuple<int, int, string>>& paras) {
+    int maxWords = 0;
+    string result;
+    for (auto& [start, end, para] : paras) {
+        int wc = countWords(para);
+        if (wc > maxWords) {
+            maxWords = wc;
+            result = para;
+        }
+    }
+    return result;
+}
+```
+
+---
+
+### ✅ Question 3: Most Frequently Occurring Words in Text
+
+```cpp
+vector<string> getMostFrequentWords(const vector<tuple<int, int, string>>& paras) {
+    unordered_map<string, int> freq;
+    for (auto& [_, __, para] : paras) {
+        istringstream iss(para);
+        string word;
+        while (iss >> word) {
+            // Normalize
+            transform(word.begin(), word.end(), word.begin(), ::tolower);
+            word.erase(remove_if(word.begin(), word.end(), ::ispunct), word.end());
+            freq[word]++;
+        }
+    }
+    int maxFreq = 0;
+    for (auto& [word, f] : freq) maxFreq = max(maxFreq, f);
+
+    vector<string> result;
+    for (auto& [word, f] : freq) {
+        if (f == maxFreq) result.push_back(word);
+    }
+    return result;
+}
+```
+
+---
+
+### ✅ Question 4: Most Frequent 4-letter Palindrome
+
+```cpp
+string getMostFrequent4LetterPalindrome(const vector<tuple<int, int, string>>& paras) {
+    unordered_map<string, int> palinFreq;
+    for (auto& [_, __, para] : paras) {
+        istringstream iss(para);
+        string word;
+        while (iss >> word) {
+            // Normalize
+            transform(word.begin(), word.end(), word.begin(), ::tolower);
+            word.erase(remove_if(word.begin(), word.end(), ::ispunct), word.end());
+            if (word.size() == 4 && word == string(word.rbegin(), word.rend())) {
+                palinFreq[word]++;
+            }
+        }
+    }
+    string result;
+    int maxFreq = 0;
+    for (auto& [word, f] : palinFreq) {
+        if (f > maxFreq) {
+            maxFreq = f;
+            result = word;
+        }
+    }
+    return result;
+}
+```
+
+---
+
+## ⏱ Time & Space Complexity
+
+| Task                       | Time     | Space     |
+|---------------------------|----------|-----------|
+| Paragraph split & tracking| O(n)     | O(p)      |
+| Word frequency count      | O(w)     | O(k)      |
+| Palindrome check          | O(w)     | O(m)      |
+
+* **n** = characters in text  
+* **w** = total words  
+* **p** = number of paragraphs  
+* **k** = unique words  
+* **m** = unique 4-letter palindromes
