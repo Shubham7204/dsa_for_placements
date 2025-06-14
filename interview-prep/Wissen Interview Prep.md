@@ -589,6 +589,8 @@ int findMaxRequestsBrute(int n, vector<int>& a, vector<int>& l, vector<int>& r) 
 
 ## ✅ Problem Statement: Slice Master
 
+![[WhatsApp Image 2025-06-13 at 20.39.12_f4090232.jpg|338]]
+
 You are given a string `S`. You must divide this string into one or more **non-empty substrings**, such that:
 
 1. **Each character appears in at most one substring.**
