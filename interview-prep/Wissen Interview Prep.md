@@ -589,7 +589,7 @@ int findMaxRequestsBrute(int n, vector<int>& a, vector<int>& l, vector<int>& r) 
 
 ## ✅ Problem Statement: Slice Master
 
-![[slicemasterdsa.jpg|338]]
+![[slicemasterdsa.jpg|299]]
 
 You are given a string `S`. You must divide this string into one or more **non-empty substrings**, such that:
 
@@ -624,10 +624,48 @@ We slice `"abac"` as: `"aba"` and `"c"`
 - `"ac"` → length = 2 → 4 points
 - Total = 8 ✅
 
-But `"aba"`, `"c"` is better than `"ab"`, `"ac"` in this case? No. Wait—We must make sure that _no character repeats_. Correct slicing is: `"aba"` + `"c"` is invalid since 'a' repeats.
+But `"aba"`, `"c"` is better than `"ab"`, `"ac"` in this case? No. Wait—We must make sure that _no character repeats_. Correct slicing is: `"aba"` + `"c" is invalid since 'a' repeats.
 
 Best is: `"ab"`, `"a"`, `"c"`
 - lengths: 2 + 1 + 1 → score = 4 + 1 + 1 = **6**
+
+## ✅ Problem Statement: Good Citizen
+
+![[good citizen.jpg|300]]
+
+You are appointed as the head of civil authority in your locality.
+You are given:
+- An integer `N`, the number of citizens.
+- An array `Behaviour[]` of size `N`, where `Behaviour[i]` represents the behavior score of the `i-th` citizen.
+    
+A citizen is called a **"good citizen"** if:
+
+`Behaviour[i] > (Behaviour[i-1] + Behaviour[i+1]) / 2`
+
+- If `i-1` or `i+1` does not exist (i.e., for the first and last citizen), treat the missing neighbor's behavior as `0`.
+### 🎯 Your task:
+Count how many good citizens are present in the locality.
+### 🧾 Input Format
+
+- `N`: An integer (1 ≤ N ≤ 10^5) — number of citizens.    
+- `Behaviour[]`: Array of `N` positive integers (1 ≤ Behaviour[i] ≤ 10^6)
+### 📤 Output Format
+- A single integer: number of good citizens.
+### 🧪 Sample Input
+`5 
+4 8 2 6 1`
+### ✅ Sample Output
+`2`
+### 🔍 Explanation:
+We check each citizen:
+
+- `i = 0`: `4 > (0 + 8)/2` → `4 > 4` ❌
+- `i = 1`: `8 > (4 + 2)/2 = 3` ✅
+- `i = 2`: `2 > (8 + 6)/2 = 7` ❌
+- `i = 3`: `6 > (2 + 1)/2 = 1.5` ✅
+- `i = 4`: `1 > (6 + 0)/2 = 3` ❌
+
+Good citizens = 2
 
 
 # SQL
