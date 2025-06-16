@@ -29,7 +29,7 @@ $P(\text{No Collision}) = \frac{2}{8} = \frac{1}{4}$
 
 **✅ Final Answer:**  
 The **probability that any two ants collide** is **¾ or 75%**.
-![|0x0](../pics/Pasted%20image%2020250616125947.png)
+![|470x313](../pics/Pasted%20image%2020250616125947.png)
 
 ### Puzzle 2 : Heaven and Hell
 
@@ -115,7 +115,7 @@ Both piles now have **4 heads each** 🎯
 > Randomly split the coins into two piles of 5, then **flip all coins in one pile**.  
 > After flipping, both piles will contain the **same number of heads**.
 
-![|0x0](../pics/10%20Coins%20Puzzle%20__%2010%20Coins%20Blindfolded%20Puzzle%20__%20Interview%20Puzzles%200-53%20screenshot.png)
+![|520x292](../pics/10%20Coins%20Puzzle%20__%2010%20Coins%20Blindfolded%20Puzzle%20__%20Interview%20Puzzles%200-53%20screenshot.png)
 ![|520x292](../pics/10%20Coins%20Puzzle%20__%2010%20Coins%20Blindfolded%20Puzzle%20__%20Interview%20Puzzles%202-27%20screenshot.png)
 ![|520x292](../pics/10%20Coins%20Puzzle%20__%2010%20Coins%20Blindfolded%20Puzzle%20__%20Interview%20Puzzles%203-3%20screenshot.png)![|523x294](../pics/10%20Coins%20Puzzle%20__%2010%20Coins%20Blindfolded%20Puzzle%20__%20Interview%20Puzzles%203-34%20screenshot.png)
 
@@ -162,3 +162,49 @@ So it must contain either **only candies** or **only sweets**.
 > Based on what you draw, you can deduce and correct all three labels logically.
 
 ![|496x305](../pics/Pasted%20image%2020250616135207.png)![|499x307](../pics/Pasted%20image%2020250616135220.png)
+
+### 🧩 Puzzle: 50 Red and 50 Blue Marbles
+
+**Problem Statement:**
+You are given **two boxes**, each containing **marbles**:
+- One box has **50 red marbles**.
+- The other has **50 blue marbles**.
+    
+You can **reshuffle** the marbles between the two boxes **in any way you like**.
+
+Then, a **box is chosen at random** (with equal probability), and **one marble is picked randomly** from that box.
+
+**Your goal:**  
+**Maximize the probability** of selecting a **red marble**.
+
+### ✅ Optimal Strategy:
+**Place 1 red marble in Box 1 (B1)** and the **remaining 49 red + 50 blue marbles in Box 2 (B2)**.
+### 🔍 Explanation:
+
+Let’s define:
+- **P(B1)** = probability of choosing Box 1 = ½
+- **P(B2)** = probability of choosing Box 2 = ½
+
+Let’s now compute the total probability **P(R)** of picking a red marble.
+### 🔢 Step-by-step Calculation:
+
+- **Box 1 (B1):** 1 red marble → P(R | B1) = 1
+- **Box 2 (B2):** 49 red, 50 blue → 99 total marbles  
+    → P(R | B2) = 49 / 99
+### 🎯 Total Probability Formula
+
+**Formula:**  
+$P(R) = P(B_1) \cdot P(R \mid B_1) + P(B_2) \cdot P(R \mid B_2)$
+
+**Calculation:**  
+$P(R) = \frac{99 + 49}{198} = \frac{148}{198} \approx \mathbf{0.7475}$
+
+### ✅ Final Answer:
+
+> By putting **1 red marble in one box** and **the rest in the other**, you **maximize the probability** of selecting a red marble to approximately **0.7475** (or **74.75%**).
+
+This strategy smartly uses the box selection randomness to boost your chances.
+
+![|549x309](../pics/Probability%20Question%20_%20Can%20you%20solve%20this%20tricky%20Logic%20Puzzle%20_%201-59%20screenshot.png)
+![|542x305](../pics/Probability%20Question%20_%20Can%20you%20solve%20this%20tricky%20Logic%20Puzzle%20_%202-58%20screenshot.png)![|527x296](../pics/Probability%20Question%20_%20Can%20you%20solve%20this%20tricky%20Logic%20Puzzle%20_%203-14%20screenshot.png)
+
