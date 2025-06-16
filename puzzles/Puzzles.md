@@ -163,7 +163,7 @@ So it must contain either **only candies** or **only sweets**.
 
 ![|496x305](../pics/Pasted%20image%2020250616135207.png)![|499x307](../pics/Pasted%20image%2020250616135220.png)
 
-### 🧩 Puzzle: 50 Red and 50 Blue Marbles
+### Puzzle 5: 50 Red and 50 Blue Marbles
 
 **Problem Statement:**
 You are given **two boxes**, each containing **marbles**:
@@ -205,6 +205,109 @@ $P(R) = \frac{99 + 49}{198} = \frac{148}{198} \approx \mathbf{0.7475}$
 
 This strategy smartly uses the box selection randomness to boost your chances.
 
-![|549x309](../pics/Probability%20Question%20_%20Can%20you%20solve%20this%20tricky%20Logic%20Puzzle%20_%201-59%20screenshot.png)
-![|542x305](../pics/Probability%20Question%20_%20Can%20you%20solve%20this%20tricky%20Logic%20Puzzle%20_%202-58%20screenshot.png)![|527x296](../pics/Probability%20Question%20_%20Can%20you%20solve%20this%20tricky%20Logic%20Puzzle%20_%203-14%20screenshot.png)
+![|549x309](../pics/Probability%20Question%20_%20Can%20you%20solve%20this%20tricky%20Logic%20Puzzle%20_%201-59%20screenshot.png)![|542x305](../pics/Probability%20Question%20_%20Can%20you%20solve%20this%20tricky%20Logic%20Puzzle%20_%202-58%20screenshot.png)![|527x296](../pics/Probability%20Question%20_%20Can%20you%20solve%20this%20tricky%20Logic%20Puzzle%20_%203-14%20screenshot.png)
+
+### Puzzle 6: Minimum Cuts to Pay Daily
+
+**Problem Statement:**  
+You hired a worker for **5 days** and have **1 gold bar** to pay them. You must pay **1/5 of the gold bar each day**, at the end of the day.  
+You can **cut the gold bar** but want to minimize the number of cuts.
+
+🔸 **What's the _minimum number of cuts_** needed to do this?
+### ✅ Answer: **2 cuts**
+
+## Solution Explanation
+![](../pics/Pasted%20image%2020250616144235.png)
+
+We need to divide the gold bar in such a way that we can pay the worker daily using **only 2 cuts**.
+
+This can be done in **two ways**, both resulting in daily payments using a combination of **giving and taking back** parts of gold.
+### 🔹 **Option 1: Pieces of 1, 2, 2 Units**
+
+Cut the gold bar into:
+- One piece of **1 unit**
+- Two pieces of **2 units**
+
+Now use this table to pay the worker:
+
+|**Day**|**Gold with Vendor**|**Gold with Worker**|**Action / Comment**|
+|---|---|---|---|
+|Day 0|[1, 2, 2]|[]|Initial state|
+|Day 1|[2, 2]|[1]|Give 1 unit|
+|Day 2|[1, 2]|[2]|Take back 1, give 2|
+|Day 3|[2]|[1, 2]|Give 1 unit|
+|Day 4|[1]|[2, 2]|Take back 1, give other 2|
+|Day 5|[]|[1, 2, 2]|Give back 1 unit (total = 5 units)|
+✅ **Worker gets exactly 1/5 more each day**
+
+### 🔹 **Option 2: Pieces of 1, 1, 3 Units**
+Cut the gold bar into:
+- Two pieces of **1 unit**
+- One piece of **3 units**
+
+Now use this table:
+
+|**Day**|**Gold with Vendor**|**Gold with Worker**|**Action / Comment**|
+|---|---|---|---|
+|Day 0|[1, 1, 3]|[]|Initial state|
+|Day 1|[1, 3]|[1]|Give 1 unit|
+|Day 2|[3]|[1, 1]|Give other 1 unit|
+|Day 3|[1, 1]|[3]|Take back both 1s, give 3 unit|
+|Day 4|[1]|[1, 3]|Give 1 unit|
+|Day 5|[]|[1, 1, 3]|Give final 1 unit (total = 5)|
+
+✅ **Same result—daily payment of exactly 1 unit more**
+### ✅ Final Takeaway:
+
+> **Minimum cuts needed: 2**  
+> Either divide the gold as **[1, 2, 2]** or **[1, 1, 3]**  
+> Use clever **give and take back** method to ensure daily payment
+
+### Puzzle 7: 100 Doors Problem
+
+**Problem Statement:**
+
+There are **100 doors** in a row, all initially **closed**.  
+A person walks past the doors **100 times**, and during each pass, they toggle the state of some doors:
+- On the **1st pass**, they toggle **every door** (open all).
+- On the **2nd pass**, they toggle **every 2nd door** (2, 4, 6, ...).
+- On the **3rd pass**, they toggle **every 3rd door** (3, 6, 9, ...).
+- ...
+- On the **100th pass**, they toggle **only the 100th door**.
+
+**Which doors remain open at the end?**
+### ✅ Answer:
+
+> Only the doors with numbers that are **perfect squares** remain open.  
+> i.e., **1, 4, 9, 16, 25, 36, 49, 64, 81, 100**
+### 🧠 Explanation:
+
+A door is toggled on pass `i` **if `i` is a divisor** of the door number.
+#### Example:
+- Door 45 is toggled on passes: 1, 3, 5, 9, 15, 45 → total **6 times**
+- Since it’s toggled even times → final state is **closed**
+#### Key Insight:
+
+- Every door is toggled once for **each of its divisors**
+- Most numbers have **even number of divisors** (because divisors come in pairs, like (1, 45), (3, 15))
+- But **perfect squares** (like 16) have one **unpaired divisor** (e.g., 4 × 4 = 16), making the total number of divisors **odd**
+
+➡️ Only doors with **odd number of total divisors** stay **open**  
+➡️ These correspond to **perfect square** door numbers
+### ✅ Final List of Open Doors:
+
+`1, 4, 9, 16, 25, 36, 49, 64, 81, 100`
+
+These are all perfect squares between 1 and 100.
+![](../pics/Pasted%20image%2020250616150748.png)
+![](../pics/Pasted%20image%2020250616150836.png)
+![](../pics/Pasted%20image%2020250616150915.png)
+![](../pics/Pasted%20image%2020250616150935.png)
+
+
+
+
+
+
+
 
