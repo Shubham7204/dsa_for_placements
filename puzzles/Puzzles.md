@@ -29,7 +29,7 @@ $P(\text{No Collision}) = \frac{2}{8} = \frac{1}{4}$
 
 **✅ Final Answer:**  
 The **probability that any two ants collide** is **¾ or 75%**.
-![](../pics/Pasted%20image%2020250616125947.png)
+![|0x0](../pics/Pasted%20image%2020250616125947.png)
 
 ### Puzzle 2 : Heaven and Hell
 
@@ -68,7 +68,7 @@ So, the correct move is to choose the **other gate**, which leads to **Heaven**.
 > **“If I asked the other gatekeeper which gate leads to Heaven, what would they say?”**  
 > → **Then choose the opposite gate.**
 
-![](../pics/Pasted%20image%2020250616125854.png)
+![|0x0](../pics/Pasted%20image%2020250616125854.png)
 
 ### Puzzle 3: 10 Coins Puzzle
 
@@ -115,7 +115,50 @@ Both piles now have **4 heads each** 🎯
 > Randomly split the coins into two piles of 5, then **flip all coins in one pile**.  
 > After flipping, both piles will contain the **same number of heads**.
 
-![](../pics/10%20Coins%20Puzzle%20__%2010%20Coins%20Blindfolded%20Puzzle%20__%20Interview%20Puzzles%200-53%20screenshot.png)
-![](../pics/10%20Coins%20Puzzle%20__%2010%20Coins%20Blindfolded%20Puzzle%20__%20Interview%20Puzzles%202-27%20screenshot.png)
-![](../pics/10%20Coins%20Puzzle%20__%2010%20Coins%20Blindfolded%20Puzzle%20__%20Interview%20Puzzles%203-3%20screenshot.png)![](../pics/10%20Coins%20Puzzle%20__%2010%20Coins%20Blindfolded%20Puzzle%20__%20Interview%20Puzzles%203-34%20screenshot.png)
+![|0x0](../pics/10%20Coins%20Puzzle%20__%2010%20Coins%20Blindfolded%20Puzzle%20__%20Interview%20Puzzles%200-53%20screenshot.png)
+![|520x292](../pics/10%20Coins%20Puzzle%20__%2010%20Coins%20Blindfolded%20Puzzle%20__%20Interview%20Puzzles%202-27%20screenshot.png)
+![|520x292](../pics/10%20Coins%20Puzzle%20__%2010%20Coins%20Blindfolded%20Puzzle%20__%20Interview%20Puzzles%203-3%20screenshot.png)![|523x294](../pics/10%20Coins%20Puzzle%20__%2010%20Coins%20Blindfolded%20Puzzle%20__%20Interview%20Puzzles%203-34%20screenshot.png)
 
+### Puzzle 4: Mislabeled Jars
+
+**Problem Statement:**
+You are given **three jars**, each labeled as follows:
+- **Jar A**: Candies
+- **Jar B**: Sweets
+- **Jar C**: Candies and Sweets (Mixed)
+
+However, **all three labels are incorrect**.
+
+You are allowed to **pick only one item** from **any one jar** (just one eatable).  
+Each jar contains only **candies**, **sweets**, or a **mixture** of both.  
+All eatables are **identical in shape**, so you **cannot distinguish them by touch**—only by seeing what you pick.
+
+**Question:**  
+What is the **minimum number of picks** required to correctly **label all the jars**, and how?
+
+![|430x265](../pics/Pasted%20image%2020250616135153.png)
+### Answer: **Only 1 pick is needed.**
+
+### 🔍 Explanation:
+
+Since **all the labels are incorrect**, the jar labeled as **"Candies and Sweets"** (Jar C) **cannot** contain the mixture.  
+So it must contain either **only candies** or **only sweets**.
+
+**Step-by-step logic:**
+
+1. **Pick one eatable from the jar labeled "Candies and Sweets" (Jar C)**.
+    - Suppose you pick a **candy**.
+    - That means **Jar C actually contains only candies** (since it cannot be a mixture, as the label is wrong).
+2. Now that you know **Jar C contains only candies**, and **its label was "Candies and Sweets" (wrong)**, you can deduce:
+    - The jar **labeled "Sweets"** (Jar B) **cannot contain sweets**, so it must contain the **mixture**.
+    - That leaves the jar **labeled "Candies"** (Jar A) with **sweets**.
+3. Final Correct Labels:
+    - **Jar A (originally labeled Candies)** → **Sweets**
+    - **Jar B (originally labeled Sweets)** → **Candies and Sweets (Mixture)**
+    - **Jar C (originally labeled Candies and Sweets)** → **Candies**
+### ✅ Final Answer:
+
+> **Only 1 pick is required—from the jar labeled "Candies and Sweets".**  
+> Based on what you draw, you can deduce and correct all three labels logically.
+
+![|496x305](../pics/Pasted%20image%2020250616135207.png)![|499x307](../pics/Pasted%20image%2020250616135220.png)
