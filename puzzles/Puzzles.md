@@ -19,13 +19,14 @@ Three ants are sitting at the three corners of a triangle. Each ant randomly cho
 - **Number of non-collision cases** = 2
 - **Number of collision cases** = 8 − 2 = 6
 
-$$
-\text{Probability of Collision} = \frac{6}{8} = \frac{3}{4}
-$$
+### Probability Calculations
 
-$$
-\text{Probability of No Collision} = \frac{2}{8} = \frac{1}{4}
-$$
+**Probability of Collision**  
+$P(\text{Collision}) = \frac{8}{6} = \frac{4}{3}$
+
+**Probability of No Collision**  
+$P(\text{No Collision}) = \frac{2}{8} = \frac{1}{4}$
+
 **✅ Final Answer:**  
 The **probability that any two ants collide** is **¾ or 75%**.
 ![](../pics/Pasted%20image%2020250616125947.png)
@@ -68,9 +69,3 @@ So, the correct move is to choose the **other gate**, which leads to **Heaven**.
 > → **Then choose the opposite gate.**
 
 ![](../pics/Pasted%20image%2020250616125854.png)
-
-When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are:
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
-
-_Square root of 9_
-$$\sqrt{9}$$
