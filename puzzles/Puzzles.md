@@ -22,7 +22,7 @@ Three ants are sitting at the three corners of a triangle. Each ant randomly cho
 ### Probability Calculations
 
 **Probability of Collision**  
-$P(\text{Collision}) = \frac{8}{6} = \frac{4}{3}$
+$P(\text{Collision}) = \frac{6}{8} = \frac{3}{4}$
 
 **Probability of No Collision**  
 $P(\text{No Collision}) = \frac{2}{8} = \frac{1}{4}$
