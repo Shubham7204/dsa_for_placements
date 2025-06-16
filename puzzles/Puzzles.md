@@ -303,11 +303,129 @@ These are all perfect squares between 1 and 100.
 ![](../pics/Pasted%20image%2020250616150836.png)
 ![](../pics/Pasted%20image%2020250616150915.png)
 ![](../pics/Pasted%20image%2020250616150935.png)
+### Puzzle 8: Find the Top 3 Fastest Horses (Out of 25)
+
+**Problem Statement:**
+
+You have **25 horses** and a race track that allows only **5 horses at a time**.  
+You can only know the **relative ranking** of horses in a race (not their exact times).  
+You must determine the **fastest 3 horses** using the **minimum number of races**.
+![](../pics/Pasted%20image%2020250617005147.png)
+![](../pics/Pasted%20image%2020250617005153.png)
+![](../pics/Pasted%20image%2020250617005200.png)
+### ✅ Final Answer: **7 Races**
+### 🧠 Step-by-Step Strategy:
+
+#### **Step 1: Grouping and Initial Races (5 races)**
+- Divide the 25 horses into **5 groups** of 5 each.
+- Run **one race per group** to determine relative ranking within each group.
+- After 5 races, you'll have 5 winners: **A1, B1, C1, D1, E1** (first-place horses of each group).
+
+#### **Step 2: Race the Winners (6th race)**
+- Race the **5 winners** from each group (A1 to E1).
+- Let’s assume the result is:
+
+`1st → A1   2nd → B1   3rd → C1   4th → D1   5th → E1`
+
+So, **A1 is the fastest** horse overall.
+Now we need to find **2nd and 3rd fastest horses**.
+
+#### 🧠 Who are potential candidates for 2nd and 3rd?
+
+Only a limited set of horses could possibly beat A1. These are:
+1. **A2, A3** – 2nd and 3rd from A1’s group
+2. **B1, B2** – 1st and 2nd from group B (since B1 came 2nd overall)
+3. **C1** – 1st from group C (since C1 came 3rd in the winners' race)
+    
+**Why only these?**
+- Any horse that came 4th or 5th in a group can’t be in the top 3 overall.
+- Similarly, any horse from groups D and E can't be in top 3 because their group winners (D1, E1) lost to A1, B1, and C1.
+
+#### **Step 3: Final Race (7th race)**
+
+Race these **5 horses**:
+- A2
+- A3
+- B1
+- B2
+- C1
+
+Assume result is:  
+`1st → A2, 2nd → B1, 3rd → C1`
+
+✅ Now, the overall top 3 horses are:
+1. **A1** (fastest from 6th race)
+2. **A2** (winner of 7th race)
+3. **B1** (second in 7th race)
+
+### Puzzle 9: Calculate Total Distance Travelled by a Bee
+
+**Problem Statement:**
+- Two trains are approaching each other on the same track.
+- **Train A speed** = 50 km/h
+- **Train B speed** = 70 km/h
+- **Initial distance between them** = 100 km
+- A bee starts flying from Train A towards Train B at **80 km/h**, and upon reaching a train, it immediately turns around and flies back.    
+- This continues until the trains collide.
+
+**Question:** What is the total distance travelled by the bee?
+### ✅ Final Answer: **66.67 km (approx)**
+![](../pics/Train%20and%20Bee%20Puzzle%20__%20Supersonic%20Bee%20and%20Train%20Puzzle%20__%20Job%20Interview%20Puzzles%206-35%20screenshot.png)
+
+![](../pics/Train%20and%20Bee%20Puzzle%20__%20Supersonic%20Bee%20and%20Train%20Puzzle%20__%20Job%20Interview%20Puzzles%204-29%20screenshot.png)
+
+![](../pics/Train%20and%20Bee%20Puzzle%20__%20Supersonic%20Bee%20and%20Train%20Puzzle%20__%20Job%20Interview%20Puzzles%204-0%20screenshot.png)
+### 🧠 Intuition:
+
+At first, this might seem complicated because the bee keeps flying back and forth endlessly. But instead of calculating each leg of the bee’s trip, we apply a **clever trick**:
+### 🔍 Key Insight:
+
+> **We just need to calculate how long the bee keeps flying.**
+
+Once we know **how long** the bee flies, and we know the **bee's speed**, we can calculate:
+`Total Distance = Bee Speed × Time`
+### 🧮 Step-by-Step Calculation:
+
+**Step 1: Find time until trains collide**
+
+- The trains are moving **towards** each other, so their **relative speed** is:
+    `50 km/h + 70 km/h = 120 km/h`
+- Time to collide:
+    `Distance / Relative Speed = 100 km / 120 km/h = 5/6 hours`
+**Step 2: Calculate distance travelled by bee**
+- Bee's speed = 80 km/h
+- Time = 5/6 hours
+- So:
+    `Distance = 80 × (5/6) = 400/6 = 66.67 km`
+### ✅ Final Answer: **The bee travels 66.67 km approximately.**
+### 📝 Important Takeaway:
+
+This puzzle is a classic example of **simplifying an infinite loop** (bee's back-and-forth trips) into a simple **distance = speed × time** problem, by calculating total time of the event.
+
+Relative speed refers to the speed of one object as observed from another moving object. It's a fundamental concept in physics, particularly in kinematics.
+
+The formula for relative speed depends on the direction of motion:
+
+1. When two objects are moving in the same direction:
+Relative speed = |Speed of object 1 - Speed of object 2|
+
+2. When two objects are moving in opposite directions:
+Relative speed = Speed of object 1 + Speed of object 2
 
 
+### Puzzle 10:** How can you cut a round cake into 8 equal pieces using only 3 straight cuts?**
 
+### ✅ Final Answer: **Stacking method – 3 cuts to make 8 equal pieces**
 
-
-
-
+### 🍰 Step-by-Step Solution:
+![](../pics/Pasted%20image%2020250617011041.png)
+#### **Step 1: First Cut – Vertical Cut**
+- Make a straight vertical cut **down the center** of the cake (as seen from above), dividing it into **2 equal halves**.
+#### **Step 2: Second Cut – Another Vertical Cut (Perpendicular)**
+- Rotate the cake 90 degrees and make another vertical cut down the center.
+- Now, the cake is divided into **4 equal quarters** (like slicing a pizza into 4 slices).
+#### **Step 3: Third Cut – Horizontal Cut Through the Middle (Layer-wise)**
+- Now, make a **horizontal cut parallel to the base** of the cake (like cutting across layers).
+- This slices all 4 pieces **horizontally in half**, creating a **total of 8 equal pieces**.
+![](../pics/Pasted%20image%2020250617011053.png)
 
