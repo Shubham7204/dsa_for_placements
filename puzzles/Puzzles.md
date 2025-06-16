@@ -69,3 +69,53 @@ So, the correct move is to choose the **other gate**, which leads to **Heaven**.
 > → **Then choose the opposite gate.**
 
 ![](../pics/Pasted%20image%2020250616125854.png)
+
+### Puzzle 3: 10 Coins Puzzle
+
+**Problem Statement:**
+
+You are blindfolded, and there are **10 coins** placed in front of you on a table.  
+You are told that exactly **5 coins are heads up** and **5 are tails up**, but you **cannot distinguish heads or tails by touch**.
+
+You are allowed to **touch and flip** the coins as many times as you want, but you **cannot see them**.
+
+**Task:**  
+Can you divide the coins into **two piles**, such that **each pile has the same number of heads-up coins**?
+### ✅ Solution: **Yes, it is possible.**
+
+### 🔍 How It Works:
+
+1. **Randomly select any 5 coins** and separate them as **Pile 1**.  
+    The remaining 5 coins will be **Pile 2**.    
+2. **Flip every coin in Pile 1.**
+
+### 💡 Why This Works:
+
+Let’s say in Pile 1, there are `x` coins that are heads up.  
+That means in Pile 2, there are `5 - x` heads (since total heads = 5).
+
+Now, when you **flip all 5 coins in Pile 1**:
+- The `x` heads become tails.
+- The remaining `5 - x` tails become heads.
+
+So after flipping, **Pile 1 now has `5 - x` heads**, and  
+**Pile 2 already had `5 - x` heads**.
+
+✅ **Both piles now have an equal number of heads!**
+
+### 🧠 Example:
+Initial state (unknown to you, but for understanding):
+- **Pile 1**: H T T T T → (1 head)
+- **Pile 2**: H H H H T → (4 heads)
+Now, flip all coins in Pile 1:
+- Becomes: T H H H H → (4 heads)
+Both piles now have **4 heads each** 🎯
+
+**✅ Final Answer:**
+> Randomly split the coins into two piles of 5, then **flip all coins in one pile**.  
+> After flipping, both piles will contain the **same number of heads**.
+
+![](../pics/10%20Coins%20Puzzle%20__%2010%20Coins%20Blindfolded%20Puzzle%20__%20Interview%20Puzzles%200-53%20screenshot.png)
+![](../pics/10%20Coins%20Puzzle%20__%2010%20Coins%20Blindfolded%20Puzzle%20__%20Interview%20Puzzles%202-27%20screenshot.png)
+![](../pics/10%20Coins%20Puzzle%20__%2010%20Coins%20Blindfolded%20Puzzle%20__%20Interview%20Puzzles%203-3%20screenshot.png)![](../pics/10%20Coins%20Puzzle%20__%2010%20Coins%20Blindfolded%20Puzzle%20__%20Interview%20Puzzles%203-34%20screenshot.png)
+
