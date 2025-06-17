@@ -1,0 +1,40 @@
+{
+  "pat": "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",
+  "owner": "Shubham7204",
+  "avatarUrl": "https://avatars.githubusercontent.com/u/83085067?v=4",
+  "repo": "dsa_for_placements",
+  "branch": "main",
+  "deviceName": "laptop",
+  "checkEveryXMinutes": 1,
+  "autoSync": "off",
+  "notifyChanges": true,
+  "notifyConflicts": true,
+  "localSha": {
+    "maths/prime_optimized.cpp": "8ee876d89f6fadd6792b642c6c9e93e092be9c9f",
+    "maths/prime_naive.cpp": "b084c9b828a20d11886fab3780d5d45968dce85a",
+    "WhatsApp Image 2025-06-13 at 20.37.40_cbb900fe.jpg": "5a08d7c3bc7dd2d4028e36c135f7ca6c584c5c6a",
+    "WhatsApp Image 2025-06-13 at 20.37.40_ac719b8f.jpg": "390fd14179b137311f236e872336d50d788c86e8",
+    "WhatsApp Image 2025-06-13 at 20.37.40_95176c23.jpg": "febd45f65dbb82b56c427bfa507813d0c51d2a00",
+    "WhatsApp Image 2025-06-13 at 20.34.53_c60ae8e7.jpg": "2542463abfd7b083b1bf0f2ff3d32e473aca56a9",
+    "WhatsApp Image 2025-06-13 at 20.37.40_31340394.jpg": "603be9cd1e7b8098c34905d7fa80c43e1f0694af",
+    "WhatsApp Image 2025-06-13 at 20.34.53_6227e39c.jpg": "2321fdc594fdaf1ab7c7bed3c626ad5dbc6e04fd",
+    "WhatsApp Image 2025-06-13 at 20.34.52_64bfc4e7.jpg": "64f9a3d1f29f089f6e8cda789eb8fc38acf7ef90",
+    "interview-prep/Wissen Interview Prep.md": "7c163dadc18e27f02856d23b05b4f690be5eae84",
+    "interview-prep/2025-06-11.md": "cb2977ca5253166615800663b3435a833df8d875"
+  },
+  "lastFetchedCommitSha": "570f949759c7c9515c1c7e2cbb7122df8f550b2f",
+  "lastFetchedRemoteSha": {
+    ".gitignore": "36fd46497b247f64271c0456535949e0f377d0cc",
+    "WhatsApp Image 2025-06-13 at 20.34.52_64bfc4e7.jpg": "8761b87aad539ce09cb7a49eb1e791089714a0cf",
+    "WhatsApp Image 2025-06-13 at 20.34.53_6227e39c.jpg": "d56686f07cbf49d05afba1c676f1449fd18a0bbc",
+    "WhatsApp Image 2025-06-13 at 20.34.53_c60ae8e7.jpg": "9365c0045e985a94d39d66e9e5ea8649fef431dc",
+    "WhatsApp Image 2025-06-13 at 20.37.40_31340394.jpg": "8c0d33a01a28973a6703216fd6e6d20211ce01bb",
+    "WhatsApp Image 2025-06-13 at 20.37.40_95176c23.jpg": "4f7b543ddedb48ed23ed227a58ce3fcbe6a05135",
+    "WhatsApp Image 2025-06-13 at 20.37.40_ac719b8f.jpg": "dde246026d0d40dcc18ce3cab35fc3dbc327e1ec",
+    "WhatsApp Image 2025-06-13 at 20.37.40_cbb900fe.jpg": "13e638781c50e176db56a6e8a4ddb257c338175a",
+    "interview-prep/2025-06-11.md": "be67c97c183741f16717290cfd2fd84b4efeca60",
+    "interview-prep/Wissen Interview Prep.md": "b0710b63940f52ac35c94c2cf88afcfb8960a369",
+    "maths/prime_naive.cpp": "94707b9ad24ce1ad2fc2d4538efb07caa9d0982a",
+    "maths/prime_optimized.cpp": "9a53a78c06571b9a9bf2b3bd4646f06cabf5c70d"
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "main": {
+    "id": "a0254c8fc021c143",
+    "type": "split",
+    "children": [
+      {
+        "id": "6c9296b49439345b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "29a4df4c554860fd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "aptitude/1. Time and Work.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1. Time and Work"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "964aa09062024fe5",
+    "type": "split",
+    "children": [
+      {
+        "id": "d3fcf22093e71a7b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7195c35ba531ddcf",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "0c61c021d24afe6a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "127097d9594c71c9",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "bf0d46c35d592357",
+    "type": "split",
+    "children": [
+      {
+        "id": "37502976e4a5c046",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f4f161648ea45cbf",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Untitled.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Untitled"
+            }
+          },
+          {
+            "id": "0eed7b414421493f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Untitled.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Untitled"
+            }
+          },
+          {
+            "id": "709227361b4781fd",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": true,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "018776f18acb3963",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "interview-prep/Wissen Interview Prep.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Wissen Interview Prep"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "fit:Fit Sync": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "templater-obsidian:Templater": false,
+      "github-sync:Sync with Remote": false
+    }
+  },
+  "active": "29a4df4c554860fd",
+  "lastOpenFiles": [
+    "pdfs/Array Problems Solutions.pdf",
+    "interview-prep/assets/good citizen.jpg",
+    "interview-prep/assets/sql4.jpg",
+    "interview-prep/assets/sql3.jpg",
+    "interview-prep/assets/sql2.jpg",
+    "interview-prep/assets/sql1.jpg",
+    "interview-prep/assets/slicemasterdsa.jpg",
+    "interview-prep/assets/serverdsa.jpg",
+    "interview-prep/assets/server3dsa.jpg",
+    "interview-prep/assets/server2dsa.jpg",
+    "interview-prep/assets",
+    "README.md",
+    "pdfs/Recursion Problems Solutions.pdf",
+    "aptitude/1. Time and Work.md",
+    "_fit/aptitude/1. Time and Work.md",
+    "pdfs/Array 2 Problems Solutions.pdf",
+    "pdfs",
+    "New folder",
+    "pics/Time and Work General Questions - Aptitude Questions and Answers Page 2 1.pdf",
+    "pics/Time and Work - Aptitude Questions and Answers 1.pdf",
+    "oops/1. Classes and Objects.md",
+    "puzzles/Puzzles.md",
+    "_fit/oops/1. Classes and Objects.md",
+    "_fit/aptitude",
+    "2025-06-17.md",
+    "_fit/oops",
+    "pics/Pasted image 20250617005147.png",
+    "interview-prep/2025-06-11.md",
+    "Excalidraw/Drawing 2025-06-17 21.16.13.excalidraw.md",
+    "sql/SQL.md",
+    "interview-prep/Wissen Interview Prep.md",
+    "_fit/puzzles/Puzzles.md",
+    "_fit/interview-prep/Wissen Interview Prep.md",
+    "Templates/format-image.tp.md.md",
+    "Excalidraw/Drawing 2025-06-11 00.23.38.excalidraw.md",
+    "Welcome.md",
+    "Hello.md",
+    "Excalidraw/Drawing 2025-05-17 20.51.49.excalidraw.md",
+    "TOOLS (MOD 3,5,6).md",
+    "output/DEPTH.md"
+  ]
+}
