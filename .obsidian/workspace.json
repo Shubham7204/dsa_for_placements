@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "6c9296b49439345b",
+        "id": "df074159c2601dd7",
         "type": "tabs",
         "children": [
           {
-            "id": "29a4df4c554860fd",
+            "id": "5a639d19555041f3",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -173,14 +173,14 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "29a4df4c554860fd",
+  "active": "5a639d19555041f3",
   "lastOpenFiles": [
     "pics/Time and Work - Aptitude Questions and Answers 2.pdf",
+    "aptitude/1. Time and Work.md",
     "pics/Time and Work General Questions - Aptitude Questions and Answers Page 2 2.pdf",
     "pdfs/Array 2 Problems Solutions.pdf",
     "pdfs/Recursion Problems Solutions.pdf",
     "README.md",
-    "aptitude/1. Time and Work.md",
     "pdfs/Array Problems Solutions.pdf",
     "interview-prep/assets/good citizen.jpg",
     "interview-prep/assets/sql4.jpg",
@@ -200,7 +200,6 @@
     "oops/1. Classes and Objects.md",
     "puzzles/Puzzles.md",
     "_fit/oops/1. Classes and Objects.md",
-    "_fit/aptitude",
     "2025-06-17.md",
     "pics/Pasted image 20250617005147.png",
     "interview-prep/2025-06-11.md",
