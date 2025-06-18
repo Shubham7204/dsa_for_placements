@@ -262,6 +262,7 @@
     - Introduced by the **International Organization for Standardization (ISO)** in 1984.
     - Consists of **7 layers**: Application, Presentation, Session, Transport, Network, Data Link, and Physical.
     - Each layer is a package of protocols that facilitates communication between computers or networks of different architectures.
+    - ![](../pics/Pasted%20image%2020250618231803.png)
 
 ## What Are Layers?
 
@@ -299,6 +300,7 @@
     - **Data Compression**:
         - Reduces the number of bits used to represent data (lossy or lossless).
         - Decreases file size, enabling faster transmission.
+        - ![](../pics/Pasted%20image%2020250618232725.png)
         - Critical for real-time video and audio streaming.
     - **Encryption/Decryption**:
         - Encrypts data at the sender for security and decrypts it at the receiver.
@@ -315,6 +317,7 @@
         - Sets up and manages connections, enables sending and receiving of data, and terminates sessions.
         - Tracks data packets to ensure they are correctly assigned to files (e.g., text or image files for a web page).
         - Example: A web browser opens separate sessions to download text and image files from a web server.
+        - ![](../pics/Pasted%20image%2020250619002201.png)
     - **Authentication**:
         - Verifies user identity using a username and password before establishing a session.
     - **Authorization**:
@@ -334,12 +337,15 @@
     - Each segment includes:
         - **Source and destination port numbers**: Direct segments to the correct application.
         - **Sequence numbers**: Reassemble segments in the correct order at the receiver.
+        - ![](../pics/Pasted%20image%2020250619002317.png)
 - **Flow Control**:
     - Regulates the amount of data transmitted to prevent overwhelming the receiver.
     - Example: If a server transmits at 50 Mbps but a mobile device can process only 10 Mbps, the transport layer instructs the server to adjust to 10 Mbps to avoid data loss or requests an increase if the rate is too low (e.g., 5 Mbps).
+    - ![](../pics/Pasted%20image%2020250619002400.png)
 - **Error Control**:
     - Detects and retransmits lost or corrupted segments using **automatic repeat request (ARQ)** schemes.
     - Adds a **checksum** to each segment to identify corrupted data.
+    - ![](../pics/Pasted%20image%2020250619002433.png)
 - **Protocols**:
     - **TCP (Transmission Control Protocol)**:
         - Provides **connection-oriented** transmission.
@@ -364,6 +370,7 @@
     - **Routing**:
         - Moves packets from source to destination based on **IPv4** or **IPv6** logical address formats.
         - Example: A packet from a Facebook server to Computer B (in Network 2) uses IP addresses and a subnet mask (e.g., 255.255.255.0) to route the packet to Network 2 and then to Computer B.
+        - ![](../pics/Pasted%20image%2020250619003352.png)
     - **Path Determination**:
         - Selects the best path for data delivery using protocols like:
             - **Open Shortest Path First (OSPF)**.
@@ -382,6 +389,7 @@
 - **Addressing**:
     - **Physical Addressing**: Assigns sender and receiver **MAC addresses** to each packet to form a frame.
     - **MAC Address**: A 12-digit alphanumeric number embedded in the NIC by the manufacturer.
+    - ![](../pics/Pasted%20image%2020250619003651.png)
 - **Implementation**:
     - Embedded as software in the NIC.
 - **Key Functions**:
@@ -390,6 +398,7 @@
         - Controls data placement and retrieval using **Media Access Control (MAC)** and **error detection**.
         - Uses **Carrier Sense Multiple Access (CSMA)** to avoid collisions when multiple devices share the same medium.
         - Adds error-detection bits to the frame’s tail to identify errors caused by media limitations.
+        - ![](../pics/Pasted%20image%2020250619004129.png)
     - **Example Scenario**:
         - A desktop (connected to Router R1 via Ethernet) sends data to a laptop (connected to Router R2 via wireless).
         - The data link layer:
@@ -397,6 +406,7 @@
             - Router R1 decapsulates the frame, re-encapsulates it for the satellite link to Router R2.
             - Router R2 decapsulates and re-encapsulates it into a **wireless frame** for the laptop.
         - The laptop decapsulates the frame and forwards the IP packet to higher layers.
+        - ![](../pics/Pasted%20image%2020250619003927.png)
 - **Summary**:
     - Provides media access, controls data transmission, and performs error detection using framing and MAC.
 
@@ -413,6 +423,7 @@
     - At the receiver: Converts signals back into bits and passes them as a frame to the data link layer.
 - **Summary**:
     - Handles the physical transmission of data by converting binary sequences into appropriate signals.
+    - ![](../pics/Pasted%20image%2020250619004242.png)
 
 ## Encapsulation and Decapsulation Process
 

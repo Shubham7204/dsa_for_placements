@@ -1,7 +1,4 @@
 [
-  "better-mathjax",
   "obsidian-excalidraw-plugin",
-  "fit",
-  "image-tools",
-  "templater-obsidian"
+  "image-tools"
 ]
