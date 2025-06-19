@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "df074159c2601dd7",
+        "id": "cdacc09eae0b9314",
         "type": "tabs",
         "children": [
           {
-            "id": "5a639d19555041f3",
+            "id": "3aecc5eb33604d57",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computer Networks/TCP IP and OSI.md",
+                "file": "oops/6. Inheritance and It's types.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TCP IP and OSI"
+              "title": "6. Inheritance and It's types"
             }
           }
         ]
@@ -161,38 +161,44 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "fit:Fit Sync": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-excalidraw-plugin:New drawing": false,
-      "templater-obsidian:Templater": false
+      "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "5a639d19555041f3",
+  "active": "3aecc5eb33604d57",
   "lastOpenFiles": [
-    "pics/Pasted image 20250619004242.png",
-    "pics/Pasted image 20250619004129.png",
-    "pics/Pasted image 20250619003927.png",
-    "pics/Pasted image 20250619003916.png",
-    "pics/Pasted image 20250619003651.png",
-    "pics/Pasted image 20250619003352.png",
-    "pics/Pasted image 20250619003146.png",
-    "pics/Pasted image 20250619002433.png",
-    "pics/Pasted image 20250619002400.png",
-    "pics/Pasted image 20250619002317.png",
-    "pics/Pasted image 20250619002201.png",
-    "Computer Networks/Untitled.md",
+    "pics/Pasted image 20250619133403.png",
+    "pics/Pasted image 20250619133318.png",
+    "pics/Pasted image 20250619133159.png",
+    "pics/Pasted image 20250619133059.png",
+    "pics/Pasted image 20250619133024.png",
+    "pics/Pasted image 20250619132935.png",
+    "oops/5. Polymorphism and It's Types.md",
+    "oops/6. Inheritance and It's types.md",
+    "pics/Pasted image 20250619131700.png",
+    "pics/Pasted image 20250619131606.png",
+    "pics/Pasted image 20250619131516.png",
+    "oops/4. This Keyword in OOPS.md",
+    "oops/3. Constructor and It's types.md",
+    "pics/Pasted image 20250619125411.png",
+    "pics/Pasted image 20250619125312.png",
+    "oops/2. Class Relationships.md",
+    "oops/1. Classes and Objects.md",
     "Computer Networks/TCP IP and OSI.md",
+    "aptitude/3. Probability.md",
+    "pics/Probability - Aptitude Questions and Answers.pdf",
+    "aptitude/2. Time and Distance.md",
+    "Computer Networks/Untitled.md",
     "pdfs/Recursion Problems Solutions.pdf",
     "Computer Networks",
     "sql/SQL.md",
     "pdfs/Array Problems Solutions.pdf",
     "pdfs/Array 2 Problems Solutions.pdf",
-    "aptitude/2. Time and Distance.md",
     "pics/Time and Distance - Aptitude Questions and Answers.pdf",
     "aptitude/1. Time and Work.md",
     "pics/Time and Work - Aptitude Questions and Answers 2.pdf",
@@ -201,8 +207,6 @@
     "interview-prep/assets",
     "_fit/aptitude/1. Time and Work.md",
     "pdfs",
-    "New folder",
-    "oops/1. Classes and Objects.md",
     "puzzles/Puzzles.md",
     "_fit/oops/1. Classes and Objects.md",
     "2025-06-17.md",
@@ -213,10 +217,6 @@
     "_fit/interview-prep/Wissen Interview Prep.md",
     "Templates/format-image.tp.md.md",
     "Excalidraw/Drawing 2025-06-11 00.23.38.excalidraw.md",
-    "Welcome.md",
-    "Hello.md",
-    "Excalidraw/Drawing 2025-05-17 20.51.49.excalidraw.md",
-    "TOOLS (MOD 3,5,6).md",
-    "output/DEPTH.md"
+    "Welcome.md"
   ]
 }
