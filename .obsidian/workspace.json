@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "oops/7. Encapsulation.md",
+                "file": "interview-prep/UBS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "7. Encapsulation"
+              "title": "UBS"
             }
           }
         ]
@@ -172,6 +172,8 @@
   },
   "active": "3aecc5eb33604d57",
   "lastOpenFiles": [
+    "oops/7. Encapsulation.md",
+    "interview-prep/UBS.md",
     "interview-prep/2025-06-11.md",
     "interview-prep/assets/server2dsa.jpg",
     "interview-prep/assets/server3dsa.jpg",
@@ -180,7 +182,6 @@
     "interview-prep/assets/sql3.jpg",
     "interview-prep/assets/serverdsa.jpg",
     "interview-prep/assets/good citizen.jpg",
-    "oops/7. Encapsulation.md",
     "interview-prep/Wissen Interview Prep.md",
     "oops/6. Inheritance and It's types.md",
     "pics/Pasted image 20250619133403.png",
