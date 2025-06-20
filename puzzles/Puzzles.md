@@ -805,3 +805,9 @@ If the camel **doesn’t eat on the return trip** (i.e., eats only on forward tr
 ![](../pics/Measure%204%20Litres%20Bucket%20Problem%20__%20The%203%20&%205%20Litre%20Die%20Hard%20Water%20Puzzle%20__%20Interview%20Puzzles%202-26%20screenshot.png)
 ![](../pics/Measure%204%20Litres%20Bucket%20Problem%20__%20The%203%20&%205%20Litre%20Die%20Hard%20Water%20Puzzle%20__%20Interview%20Puzzles%202-32%20screenshot.png)
 ![](../pics/Measure%204%20Litres%20Bucket%20Problem%20__%20The%203%20&%205%20Litre%20Die%20Hard%20Water%20Puzzle%20__%20Interview%20Puzzles%202-37%20screenshot.png)
+## Defective Boxes
+
+![](../pics/A%20Box%20of%20Defective%20Balls%20__%20Microsoft%20Interview%20Puzzle%200-30%20screenshot.png)
+![](../pics/A%20Box%20of%20Defective%20Balls%20__%20Microsoft%20Interview%20Puzzle%202-10%20screenshot.png)
+![](../pics/Microsoft%20Interview%20Puzzle%20_%20Which%20Box%20has%20Defective%20Balls_%202-24%20screenshot.png)
+![](../pics/Microsoft%20Interview%20Puzzle%20_%20Which%20Box%20has%20Defective%20Balls_%202-8%20screenshot.png)
