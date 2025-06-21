@@ -320,8 +320,56 @@ public:
 - [ ] https://leetcode.com/problems/count-pairs-of-connectable-servers-in-a-weighted-tree-network/description/
 
 - [ ] https://leetcode.com/problems/beautiful-arrangement/description/
+
+
 - [ ] https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+```cpp
+class Solution{
+	public:
+		int maxProfit(vector<int> &prices){
+			int profit = 0;
+			int mini = prices[0];
+			int n = prices.size();
+
+			for(int i = 0; i<n; i++){
+				int cost = prices[i]-mini;
+				profit = max(profit, cost);
+				mini = min(mini, prices[i]);
+			}
+		}
+		return profit;
+}
+```
+
 - [ ] https://leetcode.com/problems/valid-parentheses
+
+```cpp
+class Solution {
+public:
+    bool isValid(string s) {
+        stack<char> st;
+
+        for (int i = 0; i < s.size(); i++) {
+            char it = s[i];
+
+            if (it == '(')
+                st.push(')');
+            else if (it == '{')
+                st.push('}');
+            else if (it == '[')
+                st.push(']');
+            else {
+                if (st.empty() || st.top() != it) {
+                    return false;
+                }
+                st.pop();
+            }
+        }
+        return st.empty();  //This is important!
+    }
+};
+```
+
 - [ ] Given and array of integers ‘arr’ and a integer ‘k’, find a subarray from ‘arr’
 so size ‘k’ which has unique elements and sum its sum is maximum and
 return it’s sum. For example, if, arr = [2, 4, 6, 4, 6, 4, 5, 2] and k=3
@@ -524,13 +572,81 @@ Subarray: 6 4 5
 complexity? Which one will you use to sort a linked list of size n.
 - [ ] How would you detect a cycle in linked list.
 - [ ] - [https://www.geeksforgeeks.org/given-a-sequence-of-words-print-all-anagrams-together/](https://www.geeksforgeeks.org/given-a-sequence-of-words-print-all-anagrams-together/)
-- [ ] 1. [https://www.geeksforgeeks.org/count-minimum-number-of-fountains-to-be-activated-to-cover-the-entire-garden/](https://www.geeksforgeeks.org/count-minimum-number-of-fountains-to-be-activated-to-cover-the-entire-garden/)
-- [ ] 1. [https://www.geeksforgeeks.org/decimal-equivalent-of-binary-linked-list/](https://www.geeksforgeeks.org/decimal-equivalent-of-binary-linked-list/)
+- [ ]  [https://www.geeksforgeeks.org/count-minimum-number-of-fountains-to-be-activated-to-cover-the-entire-garden/](https://www.geeksforgeeks.org/count-minimum-number-of-fountains-to-be-activated-to-cover-the-entire-garden/)
+- [ ] https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden/description/
+
+```cpp
+class Solution {
+
+public:
+
+    int minTaps(int n, vector<int>& ranges) {
+        vector<int> startEnd(n + 1, 0);
+
+        for (int i = 0; i < ranges.size(); i++) {
+            int start = max(0, i - ranges[i]);
+            int end = min(n, i + ranges[i]);
+
+            startEnd[start] = max(startEnd[start], end);
+        }
+
+        int taps = 0;
+        int currEnd = 0;
+        int maxEnd = 0;
+
+        for (int i = 0; i < n + 1; i++) {
+            if (i > maxEnd) {
+                return -1;
+            }
+
+            if (i > currEnd) {
+                taps++;
+                currEnd = maxEnd;
+            }
+            maxEnd = max(maxEnd, startEnd[i]);
+        }
+        return taps;
+    }
+};
+```
+- [ ] [https://www.geeksforgeeks.org/decimal-equivalent-of-binary-linked-list/](https://www.geeksforgeeks.org/decimal-equivalent-of-binary-linked-list/)
 - [ ] https://leetcode.com/problems/remove-duplicate-letters/description/
 https://www.youtube.com/watch?v=Dq_ObZwTY_Q
 
+```cpp
+class Solution {
+public:
+    string removeDuplicateLetters(string s) {
+        vector<int> freq(26, 0);
+        for (char c : s) freq[c - 'a']++;
 
+        vector<bool> seen(26, false);
+        stack<char> st;
 
+        for (char c : s) {
+            freq[c - 'a']--;
+            if (seen[c - 'a']) continue;
+
+            while (!st.empty() && c < st.top() && freq[st.top() - 'a'] > 0) {
+                seen[st.top() - 'a'] = false;
+                st.pop();
+            }
+
+            st.push(c);
+            seen[c - 'a'] = true;
+        }
+
+        string ans;
+        while (!st.empty()) {
+            ans += st.top();
+            st.pop();
+        }
+        reverse(ans.begin(), ans.end());
+        return ans;
+    }
+};
+
+```
 
 - [ ] https://www.geeksforgeeks.org/lexicographically-smallest-string-formed-by-removing-duplicates/
 - [ ] https://www.geeksforgeeks.org/program-check-input-character-alphabet-digit-special-character/
