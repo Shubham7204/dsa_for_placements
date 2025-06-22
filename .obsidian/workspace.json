@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "interview-prep/UBS.md",
+                "file": "oops/9. Access Modifiers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "UBS"
+              "title": "9. Access Modifiers"
             }
           }
         ]
@@ -172,21 +172,24 @@
   },
   "active": "4c6437542ee68f44",
   "lastOpenFiles": [
-    "pics/Search Suggestions System - Leetcode 1268 - Python 5-38 screenshot.png",
-    "pics/Search Suggestions System - Leetcode 1268 - Python 6-35 screenshot.png",
-    "pics/Search Suggestions System - Leetcode 1268 - Python 7-47 screenshot.png",
-    "pics/Search Suggestions System - Leetcode 1268 - Python 5-27 screenshot.png",
+    "pics/Pasted image 20250622234618.png",
+    "pics/Pasted image 20250622234611.png",
+    "pics/Pasted image 20250622234600.png",
+    "pics/Pasted image 20250622234546.png",
+    "pics/Pasted image 20250622234539.png",
+    "pics/Pasted image 20250622234450.png",
+    "pics/Pasted image 20250622234431.png",
+    "pics/Pasted image 20250622234417.png",
+    "pics/Pasted image 20250622234400.png",
+    "pics/Pasted image 20250622234350.png",
+    "pics/Pasted image 20250622234337.png",
+    "oops/Interview Question.md",
+    "oops/9. Access Modifiers.md",
+    "oops/8. Abstraction.md",
+    "interview-prep/UBS.md",
     "oops/7. Encapsulation.md",
     "puzzles/Puzzles.md",
-    "pics/Microsoft Interview Puzzle _ Which Box has Defective Balls_ 2-8 screenshot.png",
-    "pics/Microsoft Interview Puzzle _ Which Box has Defective Balls_ 2-24 screenshot.png",
-    "pics/A Box of Defective Balls __ Microsoft Interview Puzzle 2-10 screenshot.png",
-    "pics/A Box of Defective Balls __ Microsoft Interview Puzzle 0-30 screenshot.png",
-    "interview-prep/UBS.md",
     "interview-prep/2025-06-11.md",
-    "interview-prep/assets/server2dsa.jpg",
-    "interview-prep/assets/server3dsa.jpg",
-    "interview-prep/assets/sql1.jpg",
     "interview-prep/Wissen Interview Prep.md",
     "oops/6. Inheritance and It's types.md",
     "oops/5. Polymorphism and It's Types.md",
@@ -214,9 +217,6 @@
     "pdfs",
     "_fit/oops/1. Classes and Objects.md",
     "2025-06-17.md",
-    "Excalidraw/Drawing 2025-06-17 21.16.13.excalidraw.md",
-    "_fit/puzzles/Puzzles.md",
-    "_fit/interview-prep/Wissen Interview Prep.md",
-    "Templates/format-image.tp.md.md"
+    "Excalidraw/Drawing 2025-06-17 21.16.13.excalidraw.md"
   ]
 }

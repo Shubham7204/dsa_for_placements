@@ -571,7 +571,109 @@ Subarray: 6 4 5
 - [ ] What sorting algorithms you know of tell me their space and time
 complexity? Which one will you use to sort a linked list of size n.
 - [ ] How would you detect a cycle in linked list.
+```cpp
+#include <unordered_map>
+class Solution {
+public:
+    bool hasCycle(ListNode *head) {
+        std::unordered_map<ListNode*, bool> visited;
+        ListNode* current = head;
+        while (current != nullptr) {
+            // If the node has already been visited, there's a cycle
+            if (visited[current]) {
+                return true;
+            }
+            // Mark current node as visited
+            visited[current] = true;
+            // Move to the next node
+            current = current->next;
+        }
+        // No cycle detected
+        return false;
+    }
+};
+```
+
+```cpp
+class Solution {
+public:
+    bool hasCycle(ListNode *head) {
+        if(head == NULL){
+            return false;
+        }
+        ListNode* fast = head;
+        ListNode* slow = head;
+
+        while(fast!=NULL && fast->next!=NULL){
+            slow = slow->next;
+            fast = fast->next->next;
+
+            if(slow == fast){
+                return true;
+            }
+        }
+        return false;
+    }
+};
+```
+
 - [ ] - [https://www.geeksforgeeks.org/given-a-sequence-of-words-print-all-anagrams-together/](https://www.geeksforgeeks.org/given-a-sequence-of-words-print-all-anagrams-together/)
+
+![](../pics/Group%20Anagrams%20(LeetCode%2049)%20_%20Full%20solution%20with%202%20methods%20and%20examples%20_%20Study%20Algorithms%208-51%20screenshot%201.png)
+
+![](../pics/Group%20Anagrams%20(LeetCode%2049)%20_%20Full%20solution%20with%202%20methods%20and%20examples%20_%20Study%20Algorithms%204-40%20screenshot%201.png)
+
+![](../pics/Group%20Anagrams%20(LeetCode%2049)%20_%20Full%20solution%20with%202%20methods%20and%20examples%20_%20Study%20Algorithms%2012-58%20screenshot%201.png)
+### ✅ Method 1: Categorize by Sorting
+
+```cpp
+class Solution {
+public:
+    vector<vector<string>> groupAnagrams(vector<string>& strs) {
+        unordered_map<string, vector<string>> mp;
+
+        for (int i = 0; i < strs.size(); ++i) {
+            string key = strs[i];
+            sort(key.begin(), key.end());
+            mp[key].push_back(strs[i]);
+        }
+
+        vector<vector<string>> ans;
+        for (auto it = mp.begin(); it != mp.end(); ++it) {
+            ans.push_back(it->second);
+        }
+
+        return ans;
+    }
+};
+```
+### ✅ Method 2: Categorize by Frequency Count
+```cpp
+class Solution {
+public:
+    vector<vector<string>> groupAnagrams(vector<string>& strs) {
+        unordered_map<string, vector<string>> mp;
+        for (string& s : strs) {
+            vector<int> count(26, 0);
+            for (char c : s) {
+                count[c - 'a']++;
+            }
+            string key;
+            for (int i = 0; i < 26; ++i) {
+                key += string(1, 'a' + i) + to_string(count[i]);
+            }
+            mp[key].push_back(s);
+        }
+
+        vector<vector<string>> ans;
+        for (auto& p : mp) {
+            ans.push_back(p.second);
+        }
+        return ans;
+    }
+};
+```
+
 - [ ]  [https://www.geeksforgeeks.org/count-minimum-number-of-fountains-to-be-activated-to-cover-the-entire-garden/](https://www.geeksforgeeks.org/count-minimum-number-of-fountains-to-be-activated-to-cover-the-entire-garden/)
 - [ ] https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden/description/
 
@@ -649,8 +751,50 @@ public:
 ```
 
 - [ ] https://www.geeksforgeeks.org/lexicographically-smallest-string-formed-by-removing-duplicates/
+
+
+
 - [ ] https://www.geeksforgeeks.org/program-check-input-character-alphabet-digit-special-character/
+```cpp
+#include <iostream>
+using namespace std;
+
+void charCheck(char input_char) {
+    // CHECKING FOR ALPHABET
+    if ((input_char >= 65 && input_char <= 90) || (input_char >= 97 && input_char <= 122))
+        cout << "Alphabet";
+    
+    // CHECKING FOR DIGIT
+    else if (input_char >= 48 && input_char <= 57)
+        cout << "Digit";
+
+    // OTHERWISE SPECIAL CHARACTER
+    else
+        cout << "Special Character";
+}
+
+int main() {
+    char input_char;
+    cout << "Enter a character: ";
+    cin >> input_char;
+    
+    charCheck(input_char);
+    return 0;
+}
+```
+
+|Type|ASCII Range|
+|---|---|
+|Capital Letters|65–90|
+|Small Letters|97–122|
+|Digits (0–9)|48–57
+
 - [ ] https://www.geeksforgeeks.org/dsa/find-length-of-longest-substring-with-at-most-k-normal-characters/
+# Longest Substring With At Most K Distinct Characters | 2 Pointers and Sliding Window
+
+
+
+
 - [ ] https://www.educative.io/answers/how-to-check-if-a-number-is-palindrome
 ```cpp
 #include <bits/stdc++.h>
@@ -682,300 +826,110 @@ int main() {
 }
 ```
 
-**
+## Find the Missing Number in an Array of Natural Numbers
+$$
+\text{Total} = \frac{n(n+1)}{2}
+$$
 
-How to find a missing number in an array of natural numbers
-
-  
-
-def missing(arr, n):
-
-    total = n * (n + 1) // 2
-
-    actual_sum = sum(arr)
-
-    return total - actual_sum
-
-  
-
-arr = [1, 2, 3, 5, 6]
-
-n = 6
-
-print(missing(arr, n))
-
-  
-
-there are two sorted arrays given you have to merge them into one single sorted array
-
-  
-
-[https://takeuforward.org/data-structure/merge-two-sorted-arrays-without-extra-space/](https://takeuforward.org/data-structure/merge-two-sorted-arrays-without-extra-space/)
-
-  
-**
-**![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeWS_JP-BcvZ81hkIM1srVdVePsRet88XY1EBnxAC3u5ofgkhJChO6vvWd71WL8b0Kk6J-R8B3JPCwzp_6_IaCPqADEWP3GDL0il8l9UvM7B_pg79wvUASlVJJkX-6N1W3dYHgMQw?key=craUqSkHSWLlxkmJ164hAg)**
-
-**
-
-Write a recursive function Reverse(string str) that reverses the string using:
-
-- Recursion  
-      
-    
-- No auxiliary memory (no extra arrays/lists or new string construction)  
-      
-    
-- Use a static/global string outside the function to store the result  
-      
-    
-- Each recursive call should remove the last character from the string and append it to the result  
-      
-    
-
-✅ C++ Answer (with static/global string):
-
-  
-
+```cpp
 #include <iostream>
-
+#include <vector>
 using namespace std;
 
-  
+int findMissingNumber(const vector<int>& arr, int n) {
+    int total = n * (n + 1) / 2;
+    int actual_sum = 0;
 
-string reversed = ""; // Static/global variable to store reversed string
+    for (int i = 0; i < arr.size(); i++) {
+        actual_sum += arr[i];
+    }
 
-  
-
-void Reverse(string str) {
-
-    if (str.empty()) return;
-
-  
-
-    reversed += str[str.length() - 1]; // Append last character
-
-    Reverse(str.substr(0, str.length() - 1)); // Recursive call on remaining string
-
+    return total - actual_sum;
 }
-
-  
 
 int main() {
+    vector<int> arr = {1, 2, 3, 5, 6};  // n = 6 → missing number = 4
+    int n = 6;
+    cout << "Missing number is: " << findMissingNumber(arr, n) << endl;
+    return 0;
+}
+```
 
-    string input = "hello";
+**![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeWS_JP-BcvZ81hkIM1srVdVePsRet88XY1EBnxAC3u5ofgkhJChO6vvWd71WL8b0Kk6J-R8B3JPCwzp_6_IaCPqADEWP3GDL0il8l9UvM7B_pg79wvUASlVJJkX-6N1W3dYHgMQw?key=craUqSkHSWLlxkmJ164hAg)**
 
-    Reverse(input);
+Write a recursive function Reverse(string str) that reverses the string using:
+- Recursion  
+- No auxiliary memory (no extra arrays/lists or new string construction)  
+- Use a static/global string outside the function to store the result  
+- Each recursive call should remove the last character from the string and append it to the result  
+```cpp
+#include <iostream>
+using namespace std;
 
-    cout << "Reversed: " << reversed << endl;
+string reversed = "";  // Global variable to store result
 
-    return 0;
+void Reverse(string str) {
+    if (str.empty()) return;
 
+    reversed += str.back();              // Append last char
+    Reverse(str.substr(0, str.length()-1));  // Call on remaining string
 }
 
-  
-
-✅ Output:
-
-  
-
+int main() {
+    string input = "hello";
+    Reverse(input);
+    cout << "Reversed: " << reversed << endl;
+    return 0;
+}
+```
+Output:
 Reversed: olleh
 
-  
-
-✅ Python Answer (with global variable):
-
-  
-
-reversed_str = ""  # Global variable to store reversed string
-
-  
-
-def Reverse(s):
-
-    global reversed_str
-
-    if not s:
-
-        return
-
-    reversed_str += s[-1]       # Append last character
-
-    Reverse(s[:-1])             # Recursive call on remaining string
-
-  
-
-# Example usage
-
-input_str = "hello"
-
-Reverse(input_str)
-
-print("Reversed:", reversed_str)
-
-  
-
-✅ Output:
-
-Reversed: olleh
-
-  
-
----
-
-🧠 Note:
-
-- Both implementations follow the constraints strictly.  
-      
-    
-- They avoid auxiliary data structures and loop-based logic.  
-      
-    
-- Only a single global/static string is used to build the result.  
-      
-    
-
-  
-
-✅ Problem Statement (Rephrased)
-
-Given:
-
-- A string s  
-      
-    
-- A vector (list) of strings vec  
-      
-    
-
-Find the lexicographically smallest string from vec that can be formed by rearranging the characters of s.
-
----
+## Given:
+## - A string s  
+## - A vector (list) of strings vec  
+## Find the lexicographically smallest string from vec that can be formed by rearranging the characters of s.
 
 🧠 Key Observations
-
-1. You are allowed to rearrange characters of s.  
-      
-    
+1. You are allowed to rearrange characters of s.      
 2. From the rearranged versions of s, you want to match a string in vec.  
-      
-    
 3. The valid strings are those in vec that are anagrams (or permutations) of s.  
-      
-    
 4. Among all valid anagrams (i.e., present in vec), return the lexicographically smallest.  
-      
-    
-
 ---
-
 💡 Approach
-
 1. Sort the characters of the string s to prepare for frequency matching.  
-      
-    
 2. Iterate over all strings in vec.  
-      
-    
 3. For each string, check if it is an anagram of s (i.e., it contains the same characters with the same frequency).  
-      
-    
 4. Store all such matching strings in a list.  
-      
-    
 5. Return the lexicographically smallest from this list.  
-      
-    
 
----
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
 
-🔧 Python Implementation
+string findSmallestAnagram(string s, vector<string>& vec) {
+    string sorted_s = s;
+    sort(sorted_s.begin(), sorted_s.end());
 
-python
+    string result = "";
+    for (int i = 0; i < vec.size(); ++i) {
+        string temp = vec[i];
+        sort(temp.begin(), temp.end());
 
-CopyEdit
+        if (temp == sorted_s) {
+            if (result == "" || vec[i] < result) {
+                result = vec[i];
+            }
+        }
+    }
 
-def lexicographically_smallest_anagram(s, vec):
+    return (result == "") ? "No valid anagram found" : result;
+}
 
-    from collections import Counter
-
-    s_counter = Counter(s)
-
-    valid = []
-
-  
-
-    for word in vec:
-
-        if Counter(word) == s_counter:
-
-            valid.append(word)
-
-  
-
-    if not valid:
-
-        return "No valid anagram found"
-
-    return min(valid)
-
-  
-
-# Example
-
-s = "bca"
-
-vec = ["abc", "acb", "cab", "bca", "xyz"]
-
-print(lexicographically_smallest_anagram(s, vec))  # Output: "abc"
-
-  
-
----
-
-📈 Time & Space Complexity
-
-- Time Complexity:  
-      
-    
-
-- Counting characters in s: O(n)  
-      
-    
-- Iterating over vec of size m with average string length k: O(m * k)  
-      
-    
-- Overall: O(n + m * k)  
-      
-    
-
-- Space Complexity: O(k) for counters and O(m) for valid matches.  
-      
-    
-
----
-
-✅ Example Walkthrough
-
-Let:
-
-plaintext
-
-CopyEdit
-
-s = "bca"
-
-vec = ["abc", "cab", "bca", "bac", "xyz", "def"]
-
-  
-
-- All of abc, cab, bca, bac are anagrams of "bca".  
-      
-    
-- Lexicographically smallest among these is "abc".  
-      
-    
-
-  
-**
-
+int main() {
+    string s = "bca";
+    vector<string> vec = {"abc", "acb", "cab", "bca", "xyz"};
+    cout << "Smallest anagram: " << findSmallestAnagram(s, vec) << endl;
+    return 0;
+}
+```
