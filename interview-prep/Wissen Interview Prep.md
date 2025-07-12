@@ -838,7 +838,7 @@ For each qualifying department, output:
 
 ### ✅ **Final SQL Solution:**
 
-```
+```sql
 SELECT 
     dr.department_name,
     COUNT(DISTINCT bd.procedure_id) AS procedure_count

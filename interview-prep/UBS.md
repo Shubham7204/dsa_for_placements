@@ -933,3 +933,227 @@ int main() {
     return 0;
 }
 ```
+
+# UBS OA
+# Server Upgrade Time Calculation
+
+## Full Problem Statement
+
+**Problem Title: Minimum Time to Upgrade Two Servers**
+
+**Given:**
+
+- Two servers A and B.
+- **Server A:**
+    - Needs `t1` seconds to fully upgrade.
+    - But receives incoming requests every `rep1` seconds (i.e., at time `t` if `t % rep1 == 0`) — upgrade is paused at those seconds.
+- **Server B:**
+    - Needs `t2` seconds to fully upgrade.
+    - But receives requests every `rep2` seconds (same rules).
+- In each second, **only one server** can be upgraded.
+
+**Goal:**
+
+- Return the minimum number of seconds required to fully upgrade both servers.
+
+## Example Input
+
+```cpp
+rep1 = 2, t1 = 3  
+rep2 = 3, t2 = 1
+```
+
+## Logic
+
+We simulate time starting from second 1:
+
+- If both servers are free, prefer upgrading any (greedy).
+- A server **cannot** be upgraded if:
+    - It's receiving a request that second.
+    - It's already fully upgraded.
+- Only one server can be upgraded per second.
+
+## Full Working C++ Code
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int minUpgrade(int rep1, int t1, int rep2, int t2) {
+    int time = 1;
+    int done1 = 0, done2 = 0;
+    while (done1 < t1 || done2 < t2) {
+        bool r1 = (time % rep1 == 0); // server A receives request?
+        bool r2 = (time % rep2 == 0); // server B receives request?
+        if (done1 < t1 && !r1) {
+            // upgrade server A
+            done1++;
+        } else if (done2 < t2 && !r2) {
+            // upgrade server B
+            done2++;
+        }
+        // else: no upgrade that second
+        time++;
+    }
+    return time - 1; // Because we increment time at the end of last second
+}
+```
+
+## Detailed Dry Run: minUpgrade(2, 3, 3, 1)
+
+**Given:**
+
+- Server A (S1): needs 3 seconds, requests every 2 seconds
+- Server B (S2): needs 1 second, requests every 3 seconds
+
+**We track:**
+
+- `done1 = 0` (progress of S1)
+- `done2 = 0` (progress of S2)
+
+|Time|S1 Request? (%2)|S2 Request? (%3)|Upgrade Who?|done1|done2|
+|---|---|---|---|---|---|
+|1|1 % 2 = 1 → ❌ No|1 % 3 = 1 → ❌ No|Server 1|1|0|
+|2|2 % 2 = 0 → ✅ Yes|2 % 3 = 2 → ❌ No|Server 2|1|1|
+|3|3 % 2 = 1 → ❌ No|3 % 3 = 0 → ✅ Yes|Server 1|2|1|
+|4|4 % 2 = 0 → ✅ Yes|4 % 3 = 1 → ❌ No|No upgrade|2|1|
+|5|5 % 2 = 1 → ❌ No|5 % 3 = 2 → ❌ No|Server 1|3|1|
+
+## Final Status:
+
+- Server A: `done1 = 3` ✅
+- Server B: `done2 = 1` ✅
+- **Answer: 5 seconds**
+
+## Output:
+
+```cpp
+cout << minUpgrade(2, 3, 3, 1); // Output: 5
+```
+
+## Summary
+
+- Time simulation is essential.
+- We handle request pausing per server and enforce 1-server-per-second constraint.
+- We greedily upgrade one of the servers when allowed.
+
+Let me know if you want to extend this to multiple servers or track which seconds were used for which server.
+
+## 🧩 Problem Statement (Rewritten Clearly)
+
+You are given the working hours of `n` employees. Each employee `i` has a work shift represented by:
+- `startTime[i]`: when the employee starts working
+- `endTime[i]`: when the employee ends working
+
+Two employees `i` and `j` can **form a team** **only if**:
+
+1. Their working hours **overlap**, i.e.:    
+    ```
+    startTime[i] < endTime[j] AND startTime[j] < endTime[i]
+    ```
+2. OR their shifts **touch**, meaning:
+    - `endTime[i] == startTime[j]`
+    - OR `endTime[j] == startTime[i]`
+
+> Note: This is a **direct connection** problem. No transitive relationships allowed.  
+> (If `0` connects to `1` and `1` connects to `2`, it doesn’t mean `0` connects to `2`.)
+### 🎯 Goal
+For each employee `i`, count how many employees they can directly team up with (including themselves), and return the **maximum** of those counts.
+
+---
+## 🧠 Logic Summary
+- For every employee `i`, loop over every other employee `j`.
+- Count how many satisfy the overlap or touching condition.
+- Track the max count.
+---
+## 💡 C++ Code
+
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int maxTeamSize(const vector<int>& startTime, const vector<int>& endTime) {
+    int n = startTime.size();
+    int max_team = 1;
+
+    for (int i = 0; i < n; i++) {
+        int count = 1; // Count self
+        for (int j = 0; j < n; j++) {
+            if (i == j) continue;
+
+            // Check if they overlap or touch
+            if ((startTime[j] < endTime[i] && startTime[i] < endTime[j]) ||
+                (endTime[i] == startTime[j]) || (endTime[j] == startTime[i])) {
+                count++;
+            }
+        }
+        max_team = max(max_team, count);
+    }
+
+    return max_team;
+}
+
+int main() {
+    vector<int> startTime = {1, 2, 3, 10};
+    vector<int> endTime = {2, 3, 4, 11};
+    cout << "Maximum team size: " << maxTeamSize(startTime, endTime) << endl;
+    return 0;
+}
+```
+
+## 🧪 Full Dry Run (Test Case)
+
+### Input:
+
+```cpp
+startTime = [1, 2, 3, 10];
+endTime   = [2, 3, 4, 11];
+```
+
+### Detailed Analysis Per Employee:
+### 👷 Employee 0: (1,2)
+Compare with:
+- `j = 1`: (2,3)  
+    `end[0] == start[1]` → ✅    
+- `j = 2`: (3,4)  
+    No overlap or touch → ❌
+- `j = 3`: (10,11)  
+    No overlap → ❌
+**Team = [0, 1] → Size = 2**
+
+### 👷 Employee 1: (2,3)
+Compare with:
+- `j = 0`: (1,2)  
+    `end[0] == start[1]` → ✅    
+- `j = 2`: (3,4)  
+    `end[1] == start[2]` → ✅
+- `j = 3`: (10,11)  
+    No overlap → ❌
+**Team = [0, 1, 2] → Size = 3**
+
+### 👷 Employee 2: (3,4)
+Compare with:
+- `j = 0`: (1,2)  
+    No overlap → ❌    
+- `j = 1`: (2,3)  
+    `end[1] == start[2]` → ✅
+- `j = 3`: (10,11)  
+    No overlap → ❌
+**Team = [1, 2] → Size = 2**
+
+### 👷 Employee 3: (10,11)
+Compare with:
+- `j = 0, 1, 2` → All have end time < 10  
+    No overlap or touch → ❌
+**Team = [3] → Size = 1**
+### ✅ Final Output
+
+```cpp
+Maximum team size = 3
+```
+This is from Employee 1 who can connect with Employees 0 and 2 directly.
+## 🧮 Time Complexity
+- Brute-force is **O(n²)**.
+- Acceptable for **n ≤ 1000**.
+- For very large `n`, we can optimize using interval sweep line or segment trees.
