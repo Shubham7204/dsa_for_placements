@@ -174,3 +174,114 @@ Composite Key = `(RollNo, Course)`
 | 1          | Split Rows (Atomic) | Composite Key `(RollNo, Course)` | ✅ Yes        |
 | 2          | Separate Tables     | Foreign Key + Composite Key      | ✅ Best       |
 | 3          | Multiple Columns    | Single Key `RollNo`              | ❌ No (Avoid) |
+## 📘 1st Normal Form (1NF)
+### 🔹 Definition:
+
+A relation is said to be in **First Normal Form (1NF)** if:
+- **All attributes are atomic** (no multiple values in a single cell).
+- There are **no repeating groups or arrays**.
+- The table must have a **primary key** to uniquely identify each row.
+📌 **Given by:** _E.F. Codd_, the father of relational databases.
+### ❌ Problem: Not in 1NF
+
+> Consider this student table:
+
+| RollNo | Name   | Course |
+| ------ | ------ | ------ |
+| 1      | Sai    | C/C++  |
+| 2      | Harsh  | Java   |
+| 3      | Ontkar | C/DBMS |
+
+🔴 Violation:
+- `Course` column contains **multi-valued data** like `C/C++`, `C/DBMS`.
+- This **violates atomicity** → hence, not in 1NF.
+### ✅ Condition to Achieve 1NF:
+➡️ **"Table should not contain any multi-valued attribute."**
+## ✅ 3 Ways to Convert into 1NF
+
+### ✅ **Method 1: Row Expansion (Most Preferred)**
+
+> Split each multi-valued course entry into a separate row.
+
+|RollNo|Name|Course|
+|---|---|---|
+|1|Sai|C|
+|1|Sai|C++|
+|2|Harsh|Java|
+|3|Ontkar|C|
+|3|Ontkar|DBMS|
+
+🔹 **Primary Key:** `RollNo + Course` (composite key)
+
+✅ **Advantages:**
+
+- Fully atomic
+- No NULL values
+- Works well for large/variable datasets
+
+### ✅ **Method 2: Create Two Separate Tables**
+
+> Normalize by separating the multi-valued field into its own relation.
+
+**1. Student Table (Base Table):**
+
+| RollNo | Name   |
+| ------ | ------ |
+| 1      | Sai    |
+| 2      | Harsh  |
+| 3      | Ontkar |
+
+🔹 Primary Key: `RollNo`
+
+**2. Course Enrollment Table:**
+
+|RollNo|Course|
+|---|---|
+|1|C|
+|1|C++|
+|2|Java|
+|3|C|
+|3|DBMS|
+
+🔹 Primary Key: `RollNo + Course`  
+🔗 Foreign Key: `RollNo` → references `Student`
+
+✅ **Advantages:**
+
+- Follows strict normalization
+- Ready for higher normal forms
+- Good design for relational models
+
+### ✅ **Method 3: Multiple Columns (Not Preferred)**
+
+> Create separate columns for each course (`Course1`, `Course2`, etc.)
+
+|RollNo|Name|Course1|Course2|
+|---|---|---|---|
+|1|Sai|C|C++|
+|2|Harsh|Java|NULL|
+|3|Ontkar|C|DBMS|
+
+🔹 Primary Key: `RollNo`
+
+⚠️ **Drawbacks:**
+
+- Fixed number of courses (non-scalable)
+- NULL values increase
+- Adds redundancy
+- Not flexible for real-world datasets
+### ✅ Summary of 3 Approaches
+
+|Method|Description|Primary Key|Recommended|
+|---|---|---|---|
+|Method 1|Break into atomic rows|`RollNo + Course`|✅ Yes|
+|Method 2|Create separate normalized tables|`RollNo`, `RollNo+Course`|✅ Best|
+|Method 3|Use multiple columns|`RollNo`|❌ No|
+
+### 🧠 Interview Tips:
+
+- Always mention **atomic values** and **no multi-valued attributes**.    
+- Explain **why NULLs and repeating groups are bad** (poor scalability, redundancy).
+- Prefer **Method 1 or 2** for relational DB design.
+- Highlight **foreign key usage in Method 2** for referential integrity.
+

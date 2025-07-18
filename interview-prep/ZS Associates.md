@@ -1,3 +1,28 @@
+PPT
+![](../pics/WhatsApp%20Image%202025-07-18%20at%2012.14.39_30fb8bd5.jpg)
+![](../pics/WhatsApp%20Image%202025-07-18%20at%2012.14.44_2507d2fd.jpg)
+![](../pics/WhatsApp%20Image%202025-07-18%20at%2012.17.49_cfecf7f2.jpg)
+![](../pics/WhatsApp%20Image%202025-07-18%20at%2012.19.02_f9389c1d.jpg)
+![](../pics/WhatsApp%20Image%202025-07-18%20at%2012.20.39_38c8aa42.jpg)
+![](../pics/Pasted%20image%2020250718122212.png)
+![](../pics/Pasted%20image%2020250718122528.png)
+![](../pics/Pasted%20image%2020250718122626.png)
+![](../pics/Pasted%20image%2020250718122709.png)
+![](../pics/Pasted%20image%2020250718122817.png)
+![](../pics/Pasted%20image%2020250718122837.png)
+![](../pics/Pasted%20image%2020250718122948.png)
+![](../pics/Pasted%20image%2020250718123121.png)
+![](../pics/Pasted%20image%2020250718123422.png)
+![](../pics/Pasted%20image%2020250718123652.png)
+![](../pics/Pasted%20image%2020250718123759.png)
+![](../pics/Pasted%20image%2020250718123903.png)
+![](../pics/Pasted%20image%2020250718124127.png)
+![](../pics/Pasted%20image%2020250718124216.png)
+![](../pics/Pasted%20image%2020250718124525.png)
+![](../pics/Pasted%20image%2020250718124900.png)
+![](../pics/Pasted%20image%2020250718125020.png)
+
+
 Leetcode Questions
 https://nextleet.com/sheet/zs-associates
 
