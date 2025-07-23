@@ -811,3 +811,44 @@ If the camel **doesn’t eat on the return trip** (i.e., eats only on forward tr
 ![](../pics/A%20Box%20of%20Defective%20Balls%20__%20Microsoft%20Interview%20Puzzle%202-10%20screenshot.png)
 ![](../pics/Microsoft%20Interview%20Puzzle%20_%20Which%20Box%20has%20Defective%20Balls_%202-24%20screenshot.png)
 ![](../pics/Microsoft%20Interview%20Puzzle%20_%20Which%20Box%20has%20Defective%20Balls_%202-8%20screenshot.png)
+
+## 🧩 **Puzzle Statement**
+
+- **Train A** starts from **City A** and moves toward **City B**.
+- **Train B** starts from **City B** and moves toward **City A** — both on the same track.
+- At the **same moment**, a **bird** starts flying from **City A** toward **City B** along the same track.
+### Given:
+- Speed of **Train A** = 60 km/h
+- Speed of **Train B** = 90 km/h
+- Speed of **Bird** = 120 km/h
+- Distance between the two cities = 300 km
+
+The **bird flies continuously back and forth** between Train A and Train B, instantly turning around each time it meets a train, until the two trains **collide**.
+## **Objective**
+
+Find the **total distance** the bird travels **before** the trains collide.
+## **Step-by-Step Solution**
+
+### **Step 1: Find the Time Until Collision**
+
+- Since the trains are moving **towards each other**, we add their speeds to get the **relative speed**:
+
+Relative speed of trains=60+90=150 km/h\text{Relative speed of trains} = 60 + 90 = 150 \text{ km/h}Relative speed of trains=60+90=150 km/h
+
+- Using the formula:
+$$
+Relative  speed  of  trains=60+90=150 km/h
+$$
+$$
+\text{Time} = \frac{\text{Distance}}{\text{Relative Speed}} = \frac{300}{150} = 2 \text{ hours}
+$$
+So, the trains will **collide in 2 hours**.
+### **Step 2: Find the Distance Traveled by the Bird**
+- The bird is flying **continuously for the full 2 hours**, at a speed of **120 km/h**.
+- Using the formula:
+$$
+\text{Distance} = \text{Speed} \times \text{Time} = 120 \times 2 = 240 \text{ km}
+$$
+## **Final Answer**
+
+> 🕊️ The bird travels a total distance of **240 kilometers** before the two trains collide.

@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "a7d5b810671ef5cf",
+        "id": "c5560717ca213fcb",
         "type": "tabs",
         "children": [
           {
-            "id": "70d86e25d753d8ba",
+            "id": "db880db5a0552293",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "interview-prep/ZS Associates.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "ZS Associates"
+              "title": "New tab"
             }
           }
         ]
@@ -170,10 +166,24 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "70d86e25d753d8ba",
+  "active": "db880db5a0552293",
   "lastOpenFiles": [
-    "interview-prep/ION.md",
+    "pics/Shrey_Gandhi_ZS_Associates_DAA.pdf",
     "interview-prep/ZS Associates.md",
+    "aptitude/time and work.pdf",
+    "aptitude/1. Time and Work.md",
+    "pics/Time and Work - Aptitude Questions and Answers 2.pdf",
+    "pics/Suraj_ZS_BTSA_interview_experience 1.pdf",
+    "pics/Suraj_ZS_BTSA_interview_experience.pdf",
+    "Excalidraw/Drawing 2025-07-23 18.01.48.excalidraw.md",
+    "Excalidraw",
+    "puzzles/Puzzles.md",
+    "interview-prep/2025-06-11.md",
+    "interview-prep/Wissen Interview Prep.md",
+    "interview-prep/ION.md",
+    "README.md",
+    "interview-prep/Bit Manipulation.md",
+    "interview-prep/Intervals.md",
     "pics/Pasted image 20250718125020.png",
     "pics/Pasted image 20250718124900.png",
     "pics/Pasted image 20250718124525.png",
@@ -199,23 +209,9 @@
     "oops/4. This Keyword in OOPS.md",
     "interview-prep/Arcon.md",
     "interview-prep/JM Financial.md",
-    "interview-prep/Wissen Interview Prep.md",
-    "interview-prep/2025-06-11.md",
-    "interview-prep/Bit Manipulation.md",
-    "Excalidraw/Drawing 2025-07-03 00.05.35.excalidraw.md",
-    "Excalidraw",
-    "aptitude/nodejs.md",
-    "sql/ER.md",
-    "Computer Networks/TCP IP and OSI.md",
     "Untitled",
-    "interview-prep/UBS.md",
     "pdfs/Array 2 Problems Solutions.pdf",
     "pdfs/Array Problems Solutions.pdf",
-    "pdfs/Recursion Problems Solutions.pdf",
-    "pics/Probability - Aptitude Questions and Answers.pdf",
-    "Computer Networks",
-    "pics/Time and Distance - Aptitude Questions and Answers.pdf",
-    "pics/Time and Work - Aptitude Questions and Answers 2.pdf",
-    "pics/Time and Work General Questions - Aptitude Questions and Answers Page 2 2.pdf"
+    "pdfs/Recursion Problems Solutions.pdf"
   ]
 }

@@ -1,3 +1,7 @@
+[Suraj - ZS BTSA Interview Experience](../pics/Suraj_ZS_BTSA_interview_experience%201.pdf)
+
+[Shrey Gandhi - ZS Associates DAA Interview Experience](../pics/Shrey_Gandhi_ZS_Associates_DAA.pdf)
+
 PPT
 ![](../pics/WhatsApp%20Image%202025-07-18%20at%2012.14.39_30fb8bd5.jpg)
 ![](../pics/WhatsApp%20Image%202025-07-18%20at%2012.14.44_2507d2fd.jpg)
@@ -563,3 +567,4 @@ eventTime = 5, k = 1, startTime = [1, 3], endTime = [2, 5]
 ```cpp
 return 2; // Maximum free time after rescheduling at most k=1 meeting
 ```
+
