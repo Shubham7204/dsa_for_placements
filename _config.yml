@@ -4,6 +4,145 @@ remote_theme: just-the-docs/just-the-docs
 # theme: just-the-docs   # Not supported on GitHub Pages
 # baseurl: "/dsa_for_placements"  # Uncomment if your site is not at the root
 
+just_the_docs:
+  nav:
+    - title: "Home"
+      url: /
+    - title: "Aptitude"
+      url: /aptitude/
+      children:
+        - title: "1. Time and Work"
+          url: /aptitude/1.%20Time%20and%20Work/
+        - title: "2. Time and Distance"
+          url: /aptitude/2.%20Time%20and%20Distance/
+        - title: "3. Probability"
+          url: /aptitude/3.%20Probability/
+    - title: "Computer Networks"
+      url: /Computer%20Networks/
+      children:
+        - title: "TCP IP and OSI"
+          url: /Computer%20Networks/TCP%20IP%20and%20OSI/
+    - title: "OOPS"
+      url: /oops/
+      children:
+        - title: "1. Classes and Objects"
+          url: /oops/1.%20Classes%20and%20Objects/
+        - title: "2. Class Relationships"
+          url: /oops/2.%20Class%20Relationships/
+        - title: "3. Constructor and It's types"
+          url: /oops/3.%20Constructor%20and%20It%27s%20types/
+        - title: "4. This Keyword in OOPS"
+          url: /oops/4.%20This%20Keyword%20in%20OOPS/
+        - title: "5. Polymorphism and It's Types"
+          url: /oops/5.%20Polymorphism%20and%20It%27s%20Types/
+        - title: "6. Inheritance and It's types"
+          url: /oops/6.%20Inheritance%20and%20It%27s%20types/
+        - title: "7. Encapsulation"
+          url: /oops/7.%20Encapsulation/
+        - title: "8. Abstraction"
+          url: /oops/8.%20Abstraction/
+        - title: "9. Access Modifiers"
+          url: /oops/9.%20Access%20Modifiers/
+        - title: "Interview Question"
+          url: /oops/Interview%20Question/
+    - title: "Aryan"
+      url: /aryan/
+      children:
+        - title: "AWS"
+          url: /aryan/AWS/
+        - title: "BDA"
+          url: /aryan/BDA/
+        - title: "Backend"
+          url: /aryan/Backend/
+          children:
+            - title: "API's"
+              url: /aryan/Backend/API's/
+            - title: "Internet Magic"
+              url: /aryan/Backend/Internet%20Magic/
+            - title: "MoreAbtDB"
+              url: /aryan/Backend/MoreAbtDB/
+            - title: "Web Security"
+              url: /aryan/Backend/Web%20Security/
+        - title: "DBMS"
+          url: /aryan/DBMS/
+          children:
+            - title: "complexsql"
+              url: /aryan/DBMS/complexsql/
+        - title: "Django ORM's"
+          url: /aryan/Django%20ORM's/
+        - title: "Django-Rest"
+          url: /aryan/Django-Rest/
+        - title: "Docker"
+          url: /aryan/Docker/
+        - title: "Ruby"
+          url: /aryan/Ruby/
+          children:
+            - title: "ruby on rails"
+              url: /aryan/Ruby/ruby%20on%20rails/
+        - title: "python fundamentals"
+          url: /aryan/python%20fundamentals/
+    - title: "Interview Prep"
+      url: /interview-prep/
+      children:
+        - title: "2025-06-11"
+          url: /interview-prep/2025-06-11/
+        - title: "Arcon"
+          url: /interview-prep/Arcon/
+        - title: "Bit Manipulation"
+          url: /interview-prep/Bit%20Manipulation/
+        - title: "ION"
+          url: /interview-prep/ION/
+        - title: "Intervals"
+          url: /interview-prep/Intervals/
+        - title: "JM Finance"
+          url: /interview-prep/JM%20Finance/
+        - title: "OFSS"
+          url: /interview-prep/OFSS/
+        - title: "UBS"
+          url: /interview-prep/UBS/
+        - title: "Wissen Interview Prep"
+          url: /interview-prep/Wissen%20Interview%20Prep/
+        - title: "ZS Associates"
+          url: /interview-prep/ZS%20Associates/
+        - title: "assets"
+          url: /interview-prep/assets/
+        - title: "ivp"
+          url: /interview-prep/ivp/
+    - title: "Puzzles"
+      url: /puzzles/
+      children:
+        - title: "Puzzles"
+          url: /puzzles/Puzzles/
+        - title: "React Interview Guide"
+          url: /puzzles/React_Interview_Guide/
+        - title: "React Interview Guide Part2"
+          url: /puzzles/React_Interview_Guide_Part2/
+        - title: "React Interview Guide Part3"
+          url: /puzzles/React_Interview_Guide_Part3/
+    - title: "SQL"
+      url: /sql/
+      children:
+        - title: "ER"
+          url: /sql/ER/
+        - title: "JavaScript Interview Guide"
+          url: /sql/JavaScript_Interview_Guide/
+        - title: "JavaScript Interview Guide Part2"
+          url: /sql/JavaScript_Interview_Guide_Part2/
+        - title: "JavaScript Interview Guide Part3"
+          url: /sql/JavaScript_Interview_Guide_Part3/
+        - title: "Normalization in DBMS"
+          url: /sql/Normalization%20in%20DBMS/
+        - title: "React Interview Guide"
+          url: /sql/React_Interview_Guide/
+        - title: "React Interview Guide Part2"
+          url: /sql/React_Interview_Guide_Part2/
+        - title: "React Interview Guide Part3"
+          url: /sql/React_Interview_Guide_Part3/
+        - title: "SQL"
+          url: /sql/SQL/
+        - title: "love babbar"
+          url: /sql/love%20babbar/
+
 # Optional: Sidebar navigation order and settings can be added here
 # just_the_docs:
 #   collections:
