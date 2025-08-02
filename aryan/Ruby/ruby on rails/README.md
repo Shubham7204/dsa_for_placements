@@ -509,6 +509,7 @@ before_action :authenticate_user!, except: [:index, :show]
 
 # Only show the edit button if the friend belongs to the current user
 <% if friend.user == current_user %>
+{% endif %}
 
 # Ensures only the correct user can edit, update, or destroy a friend
 def correct_user
