@@ -478,11 +478,13 @@ def index(request):
 The HTML for this form might look like:
 
 ```html
+{% raw %}
 <form method='POST'>
     {% csrf_token %}
     {{ form.as_p }}
     <button class="btn btn-primary" type="submit">Submit</button>
 </form>
+{% endraw %}
 ```
 
 If a rating outside the range of 1-5 is submitted (e.g., rating=9), Django will return an error like:

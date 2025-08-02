@@ -425,7 +425,7 @@ function ValidatedForm() {
   return (
     <div>
       <input type="text" value={inputValue} onChange={handleChange} />
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      {% raw %}{error && <p style={{ color: 'red' }}>{error}</p>}{% endraw %}
       <p>Input: {inputValue}</p>
     </div>
   );
