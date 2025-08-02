@@ -1,6 +1,7 @@
 title: My Obsidian Vault
 description: Notes and resources
-theme: just-the-docs
+remote_theme: just-the-docs/just-the-docs
+# theme: just-the-docs   # Not supported on GitHub Pages
 # baseurl: "/dsa_for_placements"  # Uncomment if your site is not at the root
 
 # Optional: Sidebar navigation order and settings can be added here
