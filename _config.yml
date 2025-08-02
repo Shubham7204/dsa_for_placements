@@ -1,0 +1,14 @@
+title: My Obsidian Vault
+description: Notes and resources
+remote_theme: pages-themes/primer@v0.6.0
+plugins:
+  - jekyll-remote-theme
+exclude:
+  - "*.pdf"
+  - "*.jpg"
+  - "*.png"
+  - "*.jpeg"
+  - "*.gif"
+  - "*.exe"
+  - "*.zip"
+  - "*.tar"
