@@ -6,15 +6,15 @@ A **Database Management System (DBMS)** is software designed to manage and organ
 
 ## Differences Between File System and DBMS
 
-| **Aspect**            | **File System**                                            | **DBMS**                                                  |
-|-----------------------|----------------------------------------------------------|----------------------------------------------------------|
-| **Structure**         | Arranges files in a storage medium on a computer.       | Manages data in a structured database.                   |
-| **Data Redundancy**   | Can contain redundant data.                              | Eliminates redundant data through normalization.          |
-| **Backup and Recovery**| Lacks inbuilt backup and recovery mechanisms.            | Provides tools for backup and recovery of lost data.     |
-| **Query Processing**   | Inefficient query processing.                            | Efficient query processing capabilities.                  |
-| **Consistency**        | Less data consistency.                                   | Ensures more data consistency through normalization.      |
-| **Security Constraints**| Offers less security.                                   | Implements advanced security mechanisms.                  |
-| **User Access**        | Typically allows only one user at a time.              | Supports multiple users accessing data simultaneously.     |
+| **Aspect**               | **File System**                                   | **DBMS**                                               |
+| ------------------------ | ------------------------------------------------- | ------------------------------------------------------ |
+| **Structure**            | Arranges files in a storage medium on a computer. | Manages data in a structured database.                 |
+| **Data Redundancy**      | Can contain redundant data.                       | Eliminates redundant data through normalization.       |
+| **Backup and Recovery**  | Lacks inbuilt backup and recovery mechanisms.     | Provides tools for backup and recovery of lost data.   |
+| **Query Processing**     | Inefficient query processing.                     | Efficient query processing capabilities.               |
+| **Consistency**          | Less data consistency.                            | Ensures more data consistency through normalization.   |
+| **Security Constraints** | Offers less security.                             | Implements advanced security mechanisms.               |
+| **User Access**          | Typically allows only one user at a time.         | Supports multiple users accessing data simultaneously. |
 
 ### Example:
 - **File System**: A simple text file to store customer details.
@@ -118,11 +118,11 @@ Integrity constraints are rules defined in a database to maintain the accuracy, 
 
 #### Types of Keys
 
-| **Key Type**        | **Description**                                                                                          | **Example**                             |
-|---------------------|----------------------------------------------------------------------------------------------------------|-----------------------------------------|
-| **1. Candidate Key**| A set of attributes that can uniquely identify a row. The primary key is chosen from this set.          | Aadhaar Number, Voter ID, Phone Number |
-| **2. Primary Key**  | An attribute that is unique and not null.                                                                | Roll Number (e.g., 101)                |
-| **3. Foreign Key**  | An attribute that references the primary key in the same or another table, maintaining referential integrity. | `rno` in the Course table referencing `rno` in the Student table. |
+| **Key Type**         | **Description**                                                                                               | **Example**                                                       |
+| -------------------- | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| **1. Candidate Key** | A set of attributes that can uniquely identify a row. The primary key is chosen from this set.                | Aadhaar Number, Voter ID, Phone Number                            |
+| **2. Primary Key**   | An attribute that is unique and not null.                                                                     | Roll Number (e.g., 101)                                           |
+| **3. Foreign Key**   | An attribute that references the primary key in the same or another table, maintaining referential integrity. | `rno` in the Course table referencing `rno` in the Student table. |
 
 
 #### Student Table
@@ -971,26 +971,26 @@ A **Full Outer Join** returns all rows when there is a match in either left or r
 
 SQL commands are categorized into different types based on their functionality. Here's a breakdown:
 
-| **Category**                | **Description**                                                |
-|-----------------------------|----------------------------------------------------------------|
-| **Data Definition Language** (DDL) | Defines the structure of the database (schema) and the tables.  |
-| **Data Manipulation Language** (DML) | Manipulates data stored in the database.                   |
-| **Data Control Language** (DCL) | Controls access to the data within the database.              |
-| **Transaction Control Language** (TCL) | Manages transactions within the database.                  |
-| **Constraints**              | Ensures data integrity by defining rules for the data.         |
+| **Category**                           | **Description**                                                |
+| -------------------------------------- | -------------------------------------------------------------- |
+| **Data Definition Language** (DDL)     | Defines the structure of the database (schema) and the tables. |
+| **Data Manipulation Language** (DML)   | Manipulates data stored in the database.                       |
+| **Data Control Language** (DCL)        | Controls access to the data within the database.               |
+| **Transaction Control Language** (TCL) | Manages transactions within the database.                      |
+| **Constraints**                        | Ensures data integrity by defining rules for the data.         |
 
 ---
 
 ### 1. **Data Definition Language (DDL)**
 DDL commands are used to define and manage database schema objects, like tables, views, and indexes.
 
-| **Command** | **Description**                                           |
-|-------------|-----------------------------------------------------------|
-| `CREATE`    | Creates a new table, view, or database.                   |
-| `ALTER`     | Modifies the structure of an existing table.              |
-| `DROP`      | Deletes an existing table or database.                    |
+| **Command** | **Description**                                                         |
+| ----------- | ----------------------------------------------------------------------- |
+| `CREATE`    | Creates a new table, view, or database.                                 |
+| `ALTER`     | Modifies the structure of an existing table.                            |
+| `DROP`      | Deletes an existing table or database.                                  |
 | `TRUNCATE`  | Removes all rows from a table without logging individual row deletions. |
-| `RENAME`    | Renames an existing object like a table or column.        |
+| `RENAME`    | Renames an existing object like a table or column.                      |
 
 **Example:**
 
@@ -1011,12 +1011,12 @@ DROP TABLE Students;
 ### 2. **Data Manipulation Language (DML)**
 DML commands are used to modify data within tables.
 
-| **Command**  | **Description**                                           |
-|--------------|-----------------------------------------------------------|
-| `SELECT`     | Retrieves data from one or more tables.                   |
-| `INSERT`     | Inserts new data into a table.                            |
-| `UPDATE`     | Modifies existing data in a table.                        |
-| `DELETE`     | Removes data from a table.                                |
+| **Command** | **Description**                         |
+| ----------- | --------------------------------------- |
+| `SELECT`    | Retrieves data from one or more tables. |
+| `INSERT`    | Inserts new data into a table.          |
+| `UPDATE`    | Modifies existing data in a table.      |
+| `DELETE`    | Removes data from a table.              |
 
 **Example:**
 
@@ -1057,11 +1057,11 @@ REVOKE INSERT ON Students FROM 'admin';
 ### 4. **Transaction Control Language (TCL)**
 TCL commands are used to manage transactions within a database, ensuring data consistency.
 
-| **Command**   | **Description**                                     |
-|---------------|-----------------------------------------------------|
-| `COMMIT`      | Saves all changes made during the current transaction. |
-| `ROLLBACK`    | Undoes all changes made during the current transaction. |
-| `SAVEPOINT`   | Sets a savepoint within a transaction to roll back to. |
+| **Command** | **Description**                                         |
+| ----------- | ------------------------------------------------------- |
+| `COMMIT`    | Saves all changes made during the current transaction.  |
+| `ROLLBACK`  | Undoes all changes made during the current transaction. |
+| `SAVEPOINT` | Sets a savepoint within a transaction to roll back to.  |
 
 **Example:**
 
