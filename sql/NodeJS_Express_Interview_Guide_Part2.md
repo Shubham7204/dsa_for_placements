@@ -467,11 +467,11 @@ For an e-commerce app:
 ### 2. What is the difference between Middleware and Routing?
 
 #### Comparison
-| **Aspect**         | **Middleware**                       | **Routing**                          |
-|--------------------|-------------------------------------|--------------------------------------|
-| **Nature**         | Function                            | Process                              |
-| **Role**           | Processes requests (e.g., logging)  | Directs requests to handlers         |
-| **Execution**      | Can modify request or end cycle     | Matches URL/method to handler        |
+| **Aspect**    | **Middleware**                     | **Routing**                   |
+| ------------- | ---------------------------------- | ----------------------------- |
+| **Nature**    | Function                           | Process                       |
+| **Role**      | Processes requests (e.g., logging) | Directs requests to handlers  |
+| **Execution** | Can modify request or end cycle    | Matches URL/method to handler |
 
 #### Definition
 **Middleware vs. Routing**: Middleware processes requests; routing directs requests to handlers.
@@ -613,11 +613,11 @@ Four main router methods:
 ### 9. What is the difference between `app.get` and `router.get` methods?
 
 #### Comparison
-| **Aspect**            | **`app.get`**                        | **`router.get`**                     |
-|-----------------------|--------------------------------------|--------------------------------------|
-| **Scope**             | Defined on main app                  | Defined on router object            |
-| **Mounting**          | Automatically mounted               | Requires `app.use` to mount         |
-| **Reusability**       | Not reusable across modules         | Reusable via export/import          |
+| **Aspect**      | **`app.get`**               | **`router.get`**            |
+| --------------- | --------------------------- | --------------------------- |
+| **Scope**       | Defined on main app         | Defined on router object    |
+| **Mounting**    | Automatically mounted       | Requires `app.use` to mount |
+| **Reusability** | Not reusable across modules | Reusable via export/import  |
 
 #### Code Example
 **`app.get`**:

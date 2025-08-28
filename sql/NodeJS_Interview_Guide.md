@@ -87,13 +87,13 @@ User → Browser (Client-Side) → UI Server (Angular/React) → Node.js API (Se
 ```
 
 ### Differences
-| **Aspect**              | **Client-Side (Browser)**                     | **Server-Side (Node.js)**                     |
-|-------------------------|----------------------------------------------|----------------------------------------------|
-| **Execution**           | Runs in the browser                          | Runs on the server                           |
-| **Languages**           | HTML, CSS, JavaScript                        | JavaScript                                   |
-| **Objects**             | `document`, `window`, `navigator`            | `request`, `response`, `server`              |
-| **Responsibilities**     | UI rendering, user interaction               | Business logic, data storage, authentication |
-| **Example APIs**        | `document.getElementById`                    | `http.createServer`                          |
+| **Aspect**           | **Client-Side (Browser)**         | **Server-Side (Node.js)**                    |
+| -------------------- | --------------------------------- | -------------------------------------------- |
+| **Execution**        | Runs in the browser               | Runs on the server                           |
+| **Languages**        | HTML, CSS, JavaScript             | JavaScript                                   |
+| **Objects**          | `document`, `window`, `navigator` | `request`, `response`, `server`              |
+| **Responsibilities** | UI rendering, user interaction    | Business logic, data storage, authentication |
+| **Example APIs**     | `document.getElementById`         | `http.createServer`                          |
 
 ### Example
 **Client-Side**:
@@ -229,12 +229,12 @@ setTimeout(() => console.log("Task 2"), 8000);  // 8s
 ## 6. What is the difference between Synchronous and Asynchronous Programming?
 
 ### Comparison
-| **Aspect**           | **Synchronous**                       | **Asynchronous**                     |
-|----------------------|---------------------------------------|--------------------------------------|
-| **Execution**        | Sequential, blocking                  | Concurrent, non-blocking            |
-| **Performance**      | Slower (sum of task times)           | Faster (concurrent execution)       |
-| **Use Case**         | Simple, linear tasks                 | I/O-bound tasks (e.g., API calls)   |
-| **Example**          | `console.log` in sequence            | `setTimeout`, `Promises`            |
+| **Aspect**      | **Synchronous**            | **Asynchronous**                  |
+| --------------- | -------------------------- | --------------------------------- |
+| **Execution**   | Sequential, blocking       | Concurrent, non-blocking          |
+| **Performance** | Slower (sum of task times) | Faster (concurrent execution)     |
+| **Use Case**    | Simple, linear tasks       | I/O-bound tasks (e.g., API calls) |
+| **Example**     | `console.log` in sequence  | `setTimeout`, `Promises`          |
 
 ### Definition
 **Synchronous vs. Asynchronous**: Synchronous programming is blocking and sequential; asynchronous is non-blocking and concurrent, leveraging events.
@@ -267,15 +267,15 @@ myEmitter.emit("myEvent");
 ## 8. What are the main features and advantages of Node.js?
 
 ### Features and Advantages
-| **Feature**              | **Advantage**                                      |
-|--------------------------|---------------------------------------------------|
-| **Asynchronous**         | Handles multiple concurrent requests efficiently |
-| **V8 Engine**            | Fast code execution                             |
-| **Event-Driven**         | Efficient for real-time apps (e.g., chat)       |
-| **Cross-Platform**       | Runs on any OS, enhancing flexibility           |
-| **JavaScript**           | No need to learn new languages                 |
-| **NPM**                  | Simplifies dependency management                |
-| **Real-Time**            | Ideal for bidirectional communication           |
+| **Feature**        | **Advantage**                                    |
+| ------------------ | ------------------------------------------------ |
+| **Asynchronous**   | Handles multiple concurrent requests efficiently |
+| **V8 Engine**      | Fast code execution                              |
+| **Event-Driven**   | Efficient for real-time apps (e.g., chat)        |
+| **Cross-Platform** | Runs on any OS, enhancing flexibility            |
+| **JavaScript**     | No need to learn new languages                   |
+| **NPM**            | Simplifies dependency management                 |
+| **Real-Time**      | Ideal for bidirectional communication            |
 
 ### Definition
 **Node.js Advantages**: Asynchronous, fast (V8), event-driven, cross-platform, JavaScript-based, scalable, and dependency-managed via NPM.

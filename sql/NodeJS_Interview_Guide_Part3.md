@@ -290,21 +290,21 @@ app.post('/api/users', (req, res) => res.json({ userId: Math.random() })); // No
 **Status codes** indicate the outcome of a client’s request to the API.
 
 ### Common Status Codes
-| **Code** | **Meaning**                     | **Description**                              |
-|----------|---------------------------------|----------------------------------------------|
-| **1xx**  | Informational                  | Request received, processing (rarely used).   |
-| **2xx**  | Success                        | Request successful.                          |
-| **200**  | OK                             | Request successful with content.             |
-| **201**  | Created                        | Resource created successfully.               |
-| **204**  | No Content                     | Request successful, no content returned.     |
-| **3xx**  | Redirection                    | Request redirected (rare in APIs).           |
-| **4xx**  | Client Error                   | Issue with the client request.               |
-| **400**  | Bad Request                    | Invalid request format/data.                 |
-| **401**  | Unauthorized                   | Authentication failed.                       |
-| **403**  | Forbidden                      | Authorized but access denied.                |
-| **404**  | Not Found                      | Resource not found.                          |
-| **5xx**  | Server Error                   | Issue on the server side.                    |
-| **500**  | Internal Server Error          | Server failure (e.g., database down).        |
+| **Code** | **Meaning**           | **Description**                             |
+| -------- | --------------------- | ------------------------------------------- |
+| **1xx**  | Informational         | Request received, processing (rarely used). |
+| **2xx**  | Success               | Request successful.                         |
+| **200**  | OK                    | Request successful with content.            |
+| **201**  | Created               | Resource created successfully.              |
+| **204**  | No Content            | Request successful, no content returned.    |
+| **3xx**  | Redirection           | Request redirected (rare in APIs).          |
+| **4xx**  | Client Error          | Issue with the client request.              |
+| **400**  | Bad Request           | Invalid request format/data.                |
+| **401**  | Unauthorized          | Authentication failed.                      |
+| **403**  | Forbidden             | Authorized but access denied.               |
+| **404**  | Not Found             | Resource not found.                         |
+| **5xx**  | Server Error          | Issue on the server side.                   |
+| **500**  | Internal Server Error | Server failure (e.g., database down).       |
 
 ### Example
 ```javascript
