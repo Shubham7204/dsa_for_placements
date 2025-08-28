@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "d0427a714c03a0e7",
+        "id": "524dac0c165307a1",
         "type": "tabs",
         "children": [
           {
-            "id": "0147a3d1a526c9a3",
+            "id": "3462a2c1db535e5d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "System Design/1. Scale From Zero to Millions of Users.md",
+                "file": "interview-prep/morgan standley/10. Morgan_Stanley_Interview_Experience_TechAnalyst_2021.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1. Scale From Zero to Millions of Users"
+              "title": "10. Morgan_Stanley_Interview_Experience_TechAnalyst_2021"
             }
           }
         ]
@@ -172,19 +172,35 @@
       "digitalgarden:Digital Garden Publication Center": false
     }
   },
-  "active": "0147a3d1a526c9a3",
+  "active": "3462a2c1db535e5d",
   "lastOpenFiles": [
+    "interview-prep/morgan standley/1. Morgan_Stanley_Interview_Experience_Complete.md",
+    "interview-prep/morgan standley/morgan standley.md",
+    "interview-prep/morgan standley/3.1 Morgan_Stanley_Interview_Experience_Set17_2021.md",
+    "interview-prep/morgan standley/2. Morgan_Stanley_Interview_Experience_2021.md",
+    "interview-prep/morgan standley/10. Morgan_Stanley_Interview_Experience_TechAnalyst_2021.md",
+    "interview-prep/morgan standley/9. Morgan_Stanley_Interview_Experience_TechAnalyst_2022.md",
+    "interview-prep/morgan standley/8. Morgan_Stanley_Interview_Experience_Set3_2021.md",
+    "interview-prep/morgan standley/7. Morgan_Stanley_Interview_Experience_FTE_2021_Summer.md",
+    "interview-prep/morgan standley/6. Morgan_Stanley_Interview_Experience_FTE_2025.md",
+    "interview-prep/morgan standley/5. Morgan_Stanley_Interview_Experience_Tech_Analyst_2022.md",
+    "interview-prep/morgan standley/4. Morgan_Stanley_Interview_Experience_2021_Sep.md",
+    "interview-prep/morgan standley/3.5 Morgan_Stanley_Interview_Experience_Set32_2019.md",
+    "interview-prep/morgan standley/3.4 Morgan_Stanley_Interview_Experience_Set4_2021.md",
+    "interview-prep/morgan standley/3.3 Morgan_Stanley_Interview_Experience_Set2_2021.md",
+    "interview-prep/morgan standley/3.2 Morgan_Stanley_Interview_Experience_Set3_2021.md",
+    "interview-prep/morgan standley",
+    "interview-prep/ivp/Screenshot 2025-07-23 at 3.39.39ΓÇ»PM.png",
+    "interview-prep/ivp/Screenshot 2025-07-23 at 3.39.34ΓÇ»PM.png",
+    "interview-prep/ivp/Screenshot 2025-07-23 at 3.39.33ΓÇ»PM.png",
+    "interview-prep/ivp/Screenshot 2025-07-23 at 3.39.32ΓÇ»PM.png",
+    "interview-prep/ivp/Screenshot 2025-07-23 at 3.39.28ΓÇ»PM.png",
+    "System Design/1. Scale From Zero to Millions of Users.md",
     "pics/Pasted image 20250828221021.png",
     "pics/Pasted image 20250828221014.png",
     "pics/Pasted image 20250828221009.png",
     "pics/Pasted image 20250828221003.png",
     "pics/Pasted image 20250828220952.png",
-    "pics/Pasted image 20250828220944.png",
-    "pics/Pasted image 20250828220937.png",
-    "pics/Pasted image 20250828220931.png",
-    "pics/Pasted image 20250828220926.png",
-    "pics/Pasted image 20250828220921.png",
-    "pics/Pasted image 20250828220916.png",
     "System Design/13. Design A Search Autocomplete System.md",
     "System Design/12. Design a Chat System.md",
     "System Design/11. Design a News Feed System.md",
@@ -195,30 +211,14 @@
     "System Design/6. Design Consistent Hashing.md",
     "System Design/5. Design a Key-Value Store.md",
     "System Design/4. Design a Rate Limiter.md",
-    "System Design/3. A Framework for System Design Interviews.md",
-    "System Design/2. Back-of-the-envelope Estimation.md",
-    "System Design/1. Scale From Zero to Millions of Users.md",
     "System Design/images",
-    "interview-prep/blind75/Intervals.md",
     "System Design",
-    "interview-prep/blind75/Untitled.md",
-    "interview-prep/blind75/Bit Manipulation.md",
     "interview-prep/blind75/Untitled",
     "interview-prep/blind75",
-    "oops/8. Abstraction.md",
-    "oops/7. Encapsulation.md",
-    "oops/6. Inheritance and It's types.md",
-    "oops/5. Polymorphism and It's Types.md",
-    "oops/2. Class Relationships.md",
-    "oops/4. This Keyword in OOPS.md",
-    "oops/Interview Question.md",
-    "oops/1. Classes and Objects.md",
-    "puzzles/Puzzles.md",
     "sql/NodeJS_Express_Interview_Guide_Part2 1.markdown",
     "sql/NodeJS_Interview_Guide 1.markdown",
     "sql/NodeJS_Express_Interview_Guide_Part2.markdown",
     "sql/NodeJS_Interview_Guide.markdown",
-    "aryan/Django ORM's/Unconfirmed 5024.crdownload",
-    "aryan/Ruby/ruby on rails"
+    "aryan/Django ORM's/Unconfirmed 5024.crdownload"
   ]
 }
