@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "System Design/12. Design a Chat System.md",
+                "file": "System Design/1. Scale From Zero to Millions of Users.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "12. Design a Chat System"
+              "title": "1. Scale From Zero to Millions of Users"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 311.5110321044922
+    "width": 200
   },
   "right": {
     "id": "bf0d46c35d592357",
@@ -174,8 +174,20 @@
   },
   "active": "0147a3d1a526c9a3",
   "lastOpenFiles": [
-    "System Design/11. Design a News Feed System.md",
+    "pics/Pasted image 20250828221021.png",
+    "pics/Pasted image 20250828221014.png",
+    "pics/Pasted image 20250828221009.png",
+    "pics/Pasted image 20250828221003.png",
+    "pics/Pasted image 20250828220952.png",
+    "pics/Pasted image 20250828220944.png",
+    "pics/Pasted image 20250828220937.png",
+    "pics/Pasted image 20250828220931.png",
+    "pics/Pasted image 20250828220926.png",
+    "pics/Pasted image 20250828220921.png",
+    "pics/Pasted image 20250828220916.png",
+    "System Design/13. Design A Search Autocomplete System.md",
     "System Design/12. Design a Chat System.md",
+    "System Design/11. Design a News Feed System.md",
     "System Design/10. Design a Notification System.md",
     "System Design/9. Design a Web Crawler.md",
     "System Design/8. Design a URL Shortener.md",
@@ -186,12 +198,6 @@
     "System Design/3. A Framework for System Design Interviews.md",
     "System Design/2. Back-of-the-envelope Estimation.md",
     "System Design/1. Scale From Zero to Millions of Users.md",
-    "pics/Pasted image 20250828184611.png",
-    "System Design/images/master-slave-db-replication.png",
-    "System Design/images/master-slave-replication.png",
-    "System Design/images/load-balancer-example.png",
-    "System Design/images/database-separate-from-web.png",
-    "System Design/images/single-server-setup.png",
     "System Design/images",
     "interview-prep/blind75/Intervals.md",
     "System Design",
@@ -208,16 +214,10 @@
     "oops/Interview Question.md",
     "oops/1. Classes and Objects.md",
     "puzzles/Puzzles.md",
-    "sql/NodeJS_Interview_Guide_Part3.md",
-    "sql/NodeJS_Express_Interview_Guide_Part2.md",
     "sql/NodeJS_Express_Interview_Guide_Part2 1.markdown",
     "sql/NodeJS_Interview_Guide 1.markdown",
     "sql/NodeJS_Express_Interview_Guide_Part2.markdown",
     "sql/NodeJS_Interview_Guide.markdown",
-    "interview-prep/ivp/Screenshot 2025-07-23 at 3.39.34ΓÇ»PM.png",
-    "interview-prep/ivp/Screenshot 2025-07-23 at 3.39.32ΓÇ»PM.png",
-    "interview-prep/ivp/Screenshot 2025-07-23 at 3.39.31ΓÇ»PM.png",
-    "interview-prep/ivp/Screenshot 2025-07-23 at 3.39.28ΓÇ»PM.png",
     "aryan/Django ORM's/Unconfirmed 5024.crdownload",
     "aryan/Ruby/ruby on rails"
   ]
