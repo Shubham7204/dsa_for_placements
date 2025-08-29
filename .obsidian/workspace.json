@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "524dac0c165307a1",
+        "id": "b35cfb1731faddd4",
         "type": "tabs",
         "children": [
           {
-            "id": "3462a2c1db535e5d",
+            "id": "9d1e5a00b29a65a2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "interview-prep/morgan standley/10. Morgan_Stanley_Interview_Experience_TechAnalyst_2021.md",
+                "file": "interview-prep/morgan standley/1. Morgan_Stanley_Interview_Experience_Complete.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "10. Morgan_Stanley_Interview_Experience_TechAnalyst_2021"
+              "title": "1. Morgan_Stanley_Interview_Experience_Complete"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 319.5110321044922
   },
   "right": {
     "id": "bf0d46c35d592357",
@@ -172,53 +172,53 @@
       "digitalgarden:Digital Garden Publication Center": false
     }
   },
-  "active": "3462a2c1db535e5d",
+  "active": "9d1e5a00b29a65a2",
   "lastOpenFiles": [
-    "interview-prep/morgan standley/1. Morgan_Stanley_Interview_Experience_Complete.md",
-    "interview-prep/morgan standley/morgan standley.md",
-    "interview-prep/morgan standley/3.1 Morgan_Stanley_Interview_Experience_Set17_2021.md",
     "interview-prep/morgan standley/2. Morgan_Stanley_Interview_Experience_2021.md",
-    "interview-prep/morgan standley/10. Morgan_Stanley_Interview_Experience_TechAnalyst_2021.md",
-    "interview-prep/morgan standley/9. Morgan_Stanley_Interview_Experience_TechAnalyst_2022.md",
-    "interview-prep/morgan standley/8. Morgan_Stanley_Interview_Experience_Set3_2021.md",
+    "interview-prep/morgan standley/3.3 Morgan_Stanley_Interview_Experience_Set2_2021.md",
+    "interview-prep/morgan standley/18. Morgan_Stanley_Interview_Experience_Spring_Analyst_OffCampus_2024.md",
+    "interview-prep/morgan standley/19. Morgan_Stanley_Interview_Experience_Tech_Analyst_OffCampus_2024.md",
+    "interview-prep/morgan standley/21. Morgan_Stanley_Interview_Experience_Summer_Analyst_OffCampus_2024.md",
     "interview-prep/morgan standley/7. Morgan_Stanley_Interview_Experience_FTE_2021_Summer.md",
-    "interview-prep/morgan standley/6. Morgan_Stanley_Interview_Experience_FTE_2025.md",
     "interview-prep/morgan standley/5. Morgan_Stanley_Interview_Experience_Tech_Analyst_2022.md",
+    "interview-prep/morgan standley/morgan standley.md",
+    "interview-prep/morgan standley/20. Morgan_Stanley_Interview_Experience_Spring_Tech_Analyst_OffCampus_2023.md",
+    "interview-prep/morgan standley/17. Morgan_Stanley_Interview_Experience_Intern_FTE_OnCampus_2023_2.md",
+    "interview-prep/morgan standley/16. Morgan_Stanley_Interview_Experience_Intern_FTE_OnCampus_2023.md",
+    "interview-prep/morgan standley/15. MSCI_Interview_Experience_TechAnalyst_OnCampus_2021.md",
+    "interview-prep/morgan standley/14. Morgan_Stanley_Interview_Experience_Set26_OffCampus_2023.md",
+    "interview-prep/morgan standley/13. Morgan_Stanley_Interview_Experience_TechAnalyst_OffCampus_2023.md",
+    "interview-prep/morgan standley/12. Morgan_Stanley_Interview_Experience_SummerIntern_2021.md",
+    "interview-prep/morgan standley/11. Morgan_Stanley_Interview_Experience_SpringTechAnalyst_2023.md",
+    "Untitled 1.base",
+    "Untitled.base",
+    "interview-prep/morgan standley/3.1 Morgan_Stanley_Interview_Experience_Set17_2021.md",
+    "System Design/13. Design A Search Autocomplete System.md",
+    "interview-prep/morgan standley/10. Morgan_Stanley_Interview_Experience_TechAnalyst_2021.md",
+    "interview-prep/morgan standley/8. Morgan_Stanley_Interview_Experience_Set3_2021.md",
+    "interview-prep/morgan standley/1. Morgan_Stanley_Interview_Experience_Complete.md",
+    "interview-prep/morgan standley/9. Morgan_Stanley_Interview_Experience_TechAnalyst_2022.md",
+    "interview-prep/morgan standley/6. Morgan_Stanley_Interview_Experience_FTE_2025.md",
     "interview-prep/morgan standley/4. Morgan_Stanley_Interview_Experience_2021_Sep.md",
     "interview-prep/morgan standley/3.5 Morgan_Stanley_Interview_Experience_Set32_2019.md",
     "interview-prep/morgan standley/3.4 Morgan_Stanley_Interview_Experience_Set4_2021.md",
-    "interview-prep/morgan standley/3.3 Morgan_Stanley_Interview_Experience_Set2_2021.md",
-    "interview-prep/morgan standley/3.2 Morgan_Stanley_Interview_Experience_Set3_2021.md",
     "interview-prep/morgan standley",
     "interview-prep/ivp/Screenshot 2025-07-23 at 3.39.39ΓÇ»PM.png",
     "interview-prep/ivp/Screenshot 2025-07-23 at 3.39.34ΓÇ»PM.png",
     "interview-prep/ivp/Screenshot 2025-07-23 at 3.39.33ΓÇ»PM.png",
     "interview-prep/ivp/Screenshot 2025-07-23 at 3.39.32ΓÇ»PM.png",
     "interview-prep/ivp/Screenshot 2025-07-23 at 3.39.28ΓÇ»PM.png",
-    "System Design/1. Scale From Zero to Millions of Users.md",
     "pics/Pasted image 20250828221021.png",
     "pics/Pasted image 20250828221014.png",
     "pics/Pasted image 20250828221009.png",
     "pics/Pasted image 20250828221003.png",
     "pics/Pasted image 20250828220952.png",
-    "System Design/13. Design A Search Autocomplete System.md",
-    "System Design/12. Design a Chat System.md",
-    "System Design/11. Design a News Feed System.md",
-    "System Design/10. Design a Notification System.md",
-    "System Design/9. Design a Web Crawler.md",
-    "System Design/8. Design a URL Shortener.md",
-    "System Design/7. Design a Unique ID Generator in Distributed Systems.md",
-    "System Design/6. Design Consistent Hashing.md",
-    "System Design/5. Design a Key-Value Store.md",
-    "System Design/4. Design a Rate Limiter.md",
     "System Design/images",
     "System Design",
     "interview-prep/blind75/Untitled",
     "interview-prep/blind75",
     "sql/NodeJS_Express_Interview_Guide_Part2 1.markdown",
     "sql/NodeJS_Interview_Guide 1.markdown",
-    "sql/NodeJS_Express_Interview_Guide_Part2.markdown",
-    "sql/NodeJS_Interview_Guide.markdown",
-    "aryan/Django ORM's/Unconfirmed 5024.crdownload"
+    "sql/NodeJS_Express_Interview_Guide_Part2.markdown"
   ]
 }
